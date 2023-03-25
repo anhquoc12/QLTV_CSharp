@@ -13,3 +13,18 @@ D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.DAO\bin\Debug
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.DAO\bin\Debug\EntityFramework.xml
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.DAO\bin\Debug\EntityFramework.SqlServer.xml
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.DAO\bin\Debug\QLTV.DTO.dll.config
+C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\QLTV.DAO\obj\Debug\QLTV.DAO.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\QLTV.DAO\obj\Debug\QLTV.DAO.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\QLTV.DAO\obj\Debug\QLTV.DAO.dll
+C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\QLTV.DAO\obj\Debug\QLTV.DAO.pdb
+C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\QLTV.DAO\bin\Debug\QLTV.DAO.dll.config
+C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\QLTV.DAO\bin\Debug\QLTV.DAO.dll
+C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\QLTV.DAO\bin\Debug\QLTV.DAO.pdb
+C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\QLTV.DAO\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\QLTV.DAO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\QLTV.DAO\bin\Debug\QLTV.DTO.dll
+C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\QLTV.DAO\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\QLTV.DAO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\QLTV.DAO\bin\Debug\QLTV.DTO.pdb
+C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\QLTV.DAO\bin\Debug\QLTV.DTO.dll.config
+C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\QLTV.DAO\obj\Debug\QLTV.DAO.csproj.CopyComplete

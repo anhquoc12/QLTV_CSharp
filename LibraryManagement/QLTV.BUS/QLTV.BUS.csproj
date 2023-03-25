@@ -44,7 +44,8 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\QLTV.DAO\bin\Debug\QLTV.DAO.dll</HintPath>
     </Reference>
-    <Reference Include="QLTV.DTO">
+    <Reference Include="QLTV.DTO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\QLTV.DTO\bin\Debug\QLTV.DTO.dll</HintPath>
     </Reference>
     <Reference Include="System" />
