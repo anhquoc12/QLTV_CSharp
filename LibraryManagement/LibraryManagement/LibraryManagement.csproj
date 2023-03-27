@@ -42,12 +42,6 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="QLTV.BUS">
-      <HintPath>..\QLTV.BUS\bin\Debug\QLTV.BUS.dll</HintPath>
-    </Reference>
-    <Reference Include="QLTV.DTO">
-      <HintPath>..\QLTV.DTO\bin\Debug\QLTV.DTO.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -141,6 +135,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QLTV.BUS\QLTV.BUS.csproj">
+      <Project>{f767f237-275c-4518-9360-ba036f3e07a1}</Project>
+      <Name>QLTV.BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QLTV.DTO\QLTV.DTO.csproj">
+      <Project>{62c23e43-51cb-4e4b-8da1-9b3236ddfd2d}</Project>
+      <Name>QLTV.DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

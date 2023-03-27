@@ -1,7 +1,5 @@
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.DAO\bin\Debug\QLTV.DAO.dll
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.DAO\bin\Debug\QLTV.DAO.pdb
-D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.DAO\bin\Debug\QLTV.DTO.dll
-D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.DAO\bin\Debug\QLTV.DTO.pdb
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.DAO\obj\Debug\QLTV.DAO.csproj.AssemblyReference.cache
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.DAO\obj\Debug\QLTV.DAO.csproj.CoreCompileInputs.cache
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.DAO\obj\Debug\QLTV.DAO.csproj.CopyComplete
@@ -12,7 +10,6 @@ D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.DAO\bin\Debug
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.DAO\bin\Debug\EntityFramework.SqlServer.dll
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.DAO\bin\Debug\EntityFramework.xml
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.DAO\bin\Debug\EntityFramework.SqlServer.xml
-D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.DAO\bin\Debug\QLTV.DTO.dll.config
 C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\QLTV.DAO\obj\Debug\QLTV.DAO.csproj.AssemblyReference.cache
 C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\QLTV.DAO\obj\Debug\QLTV.DAO.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\QLTV.DAO\obj\Debug\QLTV.DAO.dll
@@ -28,3 +25,6 @@ C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\QLTV.DAO\bin\Debug\Entity
 C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\QLTV.DAO\bin\Debug\QLTV.DTO.pdb
 C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\QLTV.DAO\bin\Debug\QLTV.DTO.dll.config
 C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\QLTV.DAO\obj\Debug\QLTV.DAO.csproj.CopyComplete
+D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.DAO\bin\Debug\QLTV.DTO.dll
+D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.DAO\bin\Debug\QLTV.DTO.pdb
+D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.DAO\bin\Debug\QLTV.DTO.dll.config

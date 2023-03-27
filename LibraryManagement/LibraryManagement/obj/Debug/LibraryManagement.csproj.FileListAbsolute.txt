@@ -14,20 +14,11 @@ D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\LibraryManagement\
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\LibraryManagement.pdb
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\EntityFramework.dll
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\EntityFramework.SqlServer.dll
-D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\QLTV.DTO.dll
-D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\QLTV.DAO.dll
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\EntityFramework.xml
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\EntityFramework.SqlServer.xml
-D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\QLTV.BUS.pdb
-D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\QLTV.BUS.dll.config
-D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\QLTV.DTO.pdb
-D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\QLTV.DTO.dll.config
-D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\QLTV.DAO.pdb
-D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\QLTV.DAO.dll.config
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csproj.CopyComplete
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.exe
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.pdb
-D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\QLTV.BUS.dll
 C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\LibraryManagement.exe.config
 C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\LibraryManagement.exe
 C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\LibraryManagement.pdb
@@ -58,3 +49,12 @@ C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\obj\Deb
 C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csproj.CopyComplete
 C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.exe
 C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.pdb
+D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\QLTV.BUS.dll
+D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\QLTV.DTO.dll
+D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\QLTV.DAO.dll
+D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\QLTV.BUS.pdb
+D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\QLTV.BUS.dll.config
+D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\QLTV.DTO.pdb
+D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\QLTV.DTO.dll.config
+D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\QLTV.DAO.pdb
+D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\QLTV.DAO.dll.config

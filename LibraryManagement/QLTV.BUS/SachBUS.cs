@@ -17,5 +17,41 @@ namespace QLTV.BUS
         {
             return new SachDAO().SachList();
         }
+
+        public IEnumerable LoadSachByID(string key)
+        {
+            return new SachDAO().LoadSachByID(key);
+        }
+
+        public IEnumerable LoadSachBySach(string key)
+        {
+            return new SachDAO().LoadSachBySach(key);
+        }
+        public IEnumerable LoadSachByTacGia(string key)
+        {
+            return new SachDAO().LoadSachByTacGia(key);
+        }
+
+        public bool AddSach(string tensach, string theloai, string gianhap, string matacgia, string mancc, string soluong)
+        {
+            if (tensach != "" || theloai == "" || gianhap == "" || soluong == "")
+                return false;
+            else
+            {
+                new SachDAO().AddSach(tensach, theloai, decimal.Parse(gianhap), matacgia, mancc, Convert.ToInt32(soluong));
+                return true;
+            }
+        }
+
+        public bool EditSach(string masach, string tensach, string theloai, string gianhap, string matacgia, string mancc, string soluong)
+        {
+            if (masach == "" || tensach == "" || theloai == "" || gianhap == "" || soluong == "")
+                return false;
+            else 
+            {
+                new SachDAO().EditSach(masach, tensach, theloai, decimal.Parse(gianhap), matacgia, mancc, Convert.ToInt32(soluong));
+                return true;
+            }
+        }
     }
 }

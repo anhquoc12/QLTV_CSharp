@@ -40,14 +40,6 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="QLTV.DAO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\QLTV.DAO\bin\Debug\QLTV.DAO.dll</HintPath>
-    </Reference>
-    <Reference Include="QLTV.DTO, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\QLTV.DTO\bin\Debug\QLTV.DTO.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -68,6 +60,16 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QLTV.DAO\QLTV.DAO.csproj">
+      <Project>{81cd8300-2d16-405a-b8b6-a86415c2ec4a}</Project>
+      <Name>QLTV.DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QLTV.DTO\QLTV.DTO.csproj">
+      <Project>{62c23e43-51cb-4e4b-8da1-9b3236ddfd2d}</Project>
+      <Name>QLTV.DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

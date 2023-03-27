@@ -4,18 +4,12 @@ D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.BUS\obj\Debug
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.BUS\obj\Debug\QLTV.BUS.csproj.CoreCompileInputs.cache
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.BUS\obj\Debug\QLTV.BUS.dll
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.BUS\obj\Debug\QLTV.BUS.pdb
-D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\QLTV.DAO.dll
-D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\QLTV.DTO.dll
-D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\QLTV.DAO.pdb
-D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\QLTV.DTO.pdb
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.BUS\obj\Debug\QLTV.BUS.csproj.CopyComplete
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\QLTV.BUS.dll.config
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\EntityFramework.dll
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\EntityFramework.SqlServer.dll
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\EntityFramework.xml
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\EntityFramework.SqlServer.xml
-D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\QLTV.DAO.dll.config
-D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\QLTV.DTO.dll.config
 C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\QLTV.BUS.dll.config
 C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\QLTV.BUS.dll
 C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\QLTV.BUS.pdb
@@ -34,3 +28,9 @@ C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\QLTV.BUS\obj\Debug\QLTV.B
 C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\QLTV.BUS\obj\Debug\QLTV.BUS.dll
 C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\QLTV.BUS\obj\Debug\QLTV.BUS.pdb
 C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\QLTV.DTO.dll
+D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\QLTV.DAO.dll
+D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\QLTV.DTO.dll
+D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\QLTV.DAO.pdb
+D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\QLTV.DAO.dll.config
+D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\QLTV.DTO.pdb
+D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\QLTV.DTO.dll.config

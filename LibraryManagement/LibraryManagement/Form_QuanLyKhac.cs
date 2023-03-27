@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using QLTV.BUS;
+//using QLTV.BUS;
 
 namespace LibraryManagement
 {
@@ -161,8 +161,8 @@ namespace LibraryManagement
         private void Form_QuanLyKhac_Load(object sender, EventArgs e)
         {
 
-            dataTacGia.DataSource = new TacGiaBUS().TacGiaList();
-            dataNhaCungCap.DataSource = new NhaCCBUS().NhaCCList();
+            //dataTacGia.DataSource = new TacGiaBUS().TacGiaList();
+            //dataNhaCungCap.DataSource = new NhaCCBUS().NhaCCList();
         }
     }
 }

@@ -34,17 +34,14 @@
             this.rdTenDocGia = new System.Windows.Forms.RadioButton();
             this.rdMaDocGia = new System.Windows.Forms.RadioButton();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnCancle = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtBirthDay = new System.Windows.Forms.DateTimePicker();
+            this.dateBirthDay = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.txtMaDocGia = new System.Windows.Forms.TextBox();
@@ -53,6 +50,9 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataDocGia = new System.Windows.Forms.DataGridView();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.rdbtnAdd = new System.Windows.Forms.RadioButton();
+            this.rdbtnEdit = new System.Windows.Forms.RadioButton();
+            this.rdbtnDelete = new System.Windows.Forms.RadioButton();
             this.gbSearch.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -87,6 +87,7 @@
             this.btnSearch.TabIndex = 1;
             this.btnSearch.Text = "Tìm Kiếm";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -137,47 +138,10 @@
             this.txtSearch.Size = new System.Drawing.Size(397, 27);
             this.txtSearch.TabIndex = 2;
             // 
-            // btnAdd
-            // 
-            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd.Location = new System.Drawing.Point(3, 50);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(123, 41);
-            this.btnAdd.TabIndex = 3;
-            this.btnAdd.Text = "Thêm";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEdit.Enabled = false;
-            this.btnEdit.Location = new System.Drawing.Point(3, 3);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(123, 41);
-            this.btnEdit.TabIndex = 4;
-            this.btnEdit.Text = "Sửa";
-            this.btnEdit.UseVisualStyleBackColor = true;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelete.Enabled = false;
-            this.btnDelete.Location = new System.Drawing.Point(3, 97);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(123, 41);
-            this.btnDelete.TabIndex = 5;
-            this.btnDelete.Text = "Xóa";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            // 
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Enabled = false;
             this.btnSave.Location = new System.Drawing.Point(3, 144);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(123, 41);
@@ -186,18 +150,17 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnCancle
+            // btnClear
             // 
-            this.btnCancle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancle.Enabled = false;
-            this.btnCancle.Location = new System.Drawing.Point(3, 191);
-            this.btnCancle.Name = "btnCancle";
-            this.btnCancle.Size = new System.Drawing.Size(123, 41);
-            this.btnCancle.TabIndex = 7;
-            this.btnCancle.Text = "Hủy";
-            this.btnCancle.UseVisualStyleBackColor = true;
-            this.btnCancle.Click += new System.EventHandler(this.btnCancle_Click);
+            this.btnClear.Location = new System.Drawing.Point(3, 191);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(123, 41);
+            this.btnClear.TabIndex = 7;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // groupBox2
             // 
@@ -219,7 +182,7 @@
             this.tableLayoutPanel3.Controls.Add(this.label8, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.txtSDT, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.label5, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.txtBirthDay, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.dateBirthDay, 1, 1);
             this.tableLayoutPanel3.Location = new System.Drawing.Point(721, 33);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
@@ -241,7 +204,6 @@
             // 
             // txtSDT
             // 
-            this.txtSDT.Enabled = false;
             this.txtSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSDT.Location = new System.Drawing.Point(247, 3);
             this.txtSDT.Name = "txtSDT";
@@ -258,16 +220,15 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Ngày Sinh";
             // 
-            // txtBirthDay
+            // dateBirthDay
             // 
-            this.txtBirthDay.CustomFormat = "dd/MM/yyyy";
-            this.txtBirthDay.Enabled = false;
-            this.txtBirthDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBirthDay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.txtBirthDay.Location = new System.Drawing.Point(247, 60);
-            this.txtBirthDay.Name = "txtBirthDay";
-            this.txtBirthDay.Size = new System.Drawing.Size(238, 27);
-            this.txtBirthDay.TabIndex = 14;
+            this.dateBirthDay.CustomFormat = "dd/MM/yyyy";
+            this.dateBirthDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateBirthDay.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateBirthDay.Location = new System.Drawing.Point(247, 60);
+            this.dateBirthDay.Name = "dateBirthDay";
+            this.dateBirthDay.Size = new System.Drawing.Size(238, 27);
+            this.dateBirthDay.TabIndex = 14;
             // 
             // tableLayoutPanel2
             // 
@@ -318,7 +279,6 @@
             // 
             // txtTenDocGia
             // 
-            this.txtTenDocGia.Enabled = false;
             this.txtTenDocGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenDocGia.Location = new System.Drawing.Point(178, 60);
             this.txtTenDocGia.Name = "txtTenDocGia";
@@ -331,9 +291,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.dataDocGia);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(14, 434);
+            this.groupBox3.Location = new System.Drawing.Point(14, 369);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1898, 544);
+            this.groupBox3.Size = new System.Drawing.Size(1898, 616);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Danh Sách Độc Giả";
@@ -348,23 +308,63 @@
             this.dataDocGia.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dataDocGia.ColumnHeadersHeight = 29;
             this.dataDocGia.Location = new System.Drawing.Point(8, 26);
+            this.dataDocGia.MultiSelect = false;
             this.dataDocGia.Name = "dataDocGia";
+            this.dataDocGia.ReadOnly = true;
             this.dataDocGia.RowHeadersWidth = 51;
             this.dataDocGia.RowTemplate.Height = 24;
-            this.dataDocGia.Size = new System.Drawing.Size(1872, 494);
+            this.dataDocGia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataDocGia.Size = new System.Drawing.Size(1872, 584);
             this.dataDocGia.TabIndex = 1;
+            this.dataDocGia.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataDocGia_CellMouseClick);
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.btnEdit);
-            this.flowLayoutPanel1.Controls.Add(this.btnAdd);
-            this.flowLayoutPanel1.Controls.Add(this.btnDelete);
+            this.flowLayoutPanel1.Controls.Add(this.rdbtnAdd);
+            this.flowLayoutPanel1.Controls.Add(this.rdbtnEdit);
+            this.flowLayoutPanel1.Controls.Add(this.rdbtnDelete);
             this.flowLayoutPanel1.Controls.Add(this.btnSave);
-            this.flowLayoutPanel1.Controls.Add(this.btnCancle);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(1327, 168);
+            this.flowLayoutPanel1.Controls.Add(this.btnClear);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(1320, 103);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(130, 239);
             this.flowLayoutPanel1.TabIndex = 11;
+            // 
+            // rdbtnAdd
+            // 
+            this.rdbtnAdd.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rdbtnAdd.Location = new System.Drawing.Point(3, 3);
+            this.rdbtnAdd.Name = "rdbtnAdd";
+            this.rdbtnAdd.Size = new System.Drawing.Size(123, 41);
+            this.rdbtnAdd.TabIndex = 10;
+            this.rdbtnAdd.TabStop = true;
+            this.rdbtnAdd.Text = "Thêm";
+            this.rdbtnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rdbtnAdd.UseVisualStyleBackColor = true;
+            // 
+            // rdbtnEdit
+            // 
+            this.rdbtnEdit.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rdbtnEdit.Location = new System.Drawing.Point(3, 50);
+            this.rdbtnEdit.Name = "rdbtnEdit";
+            this.rdbtnEdit.Size = new System.Drawing.Size(123, 41);
+            this.rdbtnEdit.TabIndex = 9;
+            this.rdbtnEdit.TabStop = true;
+            this.rdbtnEdit.Text = "Sửa";
+            this.rdbtnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rdbtnEdit.UseVisualStyleBackColor = true;
+            // 
+            // rdbtnDelete
+            // 
+            this.rdbtnDelete.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rdbtnDelete.Location = new System.Drawing.Point(3, 97);
+            this.rdbtnDelete.Name = "rdbtnDelete";
+            this.rdbtnDelete.Size = new System.Drawing.Size(123, 41);
+            this.rdbtnDelete.TabIndex = 8;
+            this.rdbtnDelete.TabStop = true;
+            this.rdbtnDelete.Text = "Xóa";
+            this.rdbtnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rdbtnDelete.UseVisualStyleBackColor = true;
             // 
             // Form_DocGia
             // 
@@ -413,11 +413,8 @@
         private System.Windows.Forms.RadioButton rdTenDocGia;
         private System.Windows.Forms.RadioButton rdMaDocGia;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnCancle;
+        private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dataDocGia;
@@ -427,11 +424,14 @@
         private System.Windows.Forms.TextBox txtMaDocGia;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtSDT;
-        private System.Windows.Forms.DateTimePicker txtBirthDay;
+        private System.Windows.Forms.DateTimePicker dateBirthDay;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtTenDocGia;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.RadioButton rdbtnAdd;
+        private System.Windows.Forms.RadioButton rdbtnEdit;
+        private System.Windows.Forms.RadioButton rdbtnDelete;
     }
 }

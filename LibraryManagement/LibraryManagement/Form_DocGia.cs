@@ -1,4 +1,5 @@
 ﻿
+using QLTV.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLTV.BUS;
 using QLTV.DTO;
+using System.Data.Entity.Core.Metadata.Edm;
 
 namespace LibraryManagement
 {
@@ -20,62 +22,18 @@ namespace LibraryManagement
         {
             InitializeComponent();
         }
-        private void init()
-        {
-            txtMaDocGia.Text = "";
-            txtTenDocGia.Text = "";
-            txtBirthDay.Text = DateTime.Now.ToString();
-            txtSDT.Text = "";
-        }
-        
-        private void reset()
-        {
-            btnCancle.Enabled = false;
-            btnSave.Enabled = false;
-            btnAdd.Enabled = true;
-            btnEdit.Enabled = false;
-            btnDelete.Enabled = false;
-            txtMaDocGia.Enabled = false;
-            txtTenDocGia.Enabled = false;
-            txtBirthDay.Enabled = false;
-            txtSDT.Enabled = false;
-        }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void ShowDataToTextBox(DataGridView data)
         {
-            txtMaDocGia.Enabled = true;
-            txtTenDocGia.Enabled = true;
-            txtBirthDay.Enabled= true;
-            txtSDT.Enabled = true;
-            btnCancle.Enabled = true;
-            btnSave.Enabled = true;
-            btnAdd.Enabled = false;
+            DataGridViewRow row = dataDocGia.SelectedRows[0];
+
+            // Gán cái vừa chọn cho các textbox
+
+            txtMaDocGia.Text = row.Cells["MaDocGia"].Value.ToString();
+            txtTenDocGia.Text = row.Cells["TenDocGia"].Value.ToString();
+            txtSDT.Text = row.Cells["SDT"].Value.ToString();
+            dateBirthDay.Text = row.Cells["NgaySinh"].Value.ToString();
         }
-
-        private void btnCancle_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            if (txtMaDocGia.Text == "" || txtTenDocGia.Text == "" || txtSDT.Text == "")
-            {
-                MessageBox.Show("Vui lòng nhập đủ thông tin", "Không Thể Lưu",
-                    buttons: MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
-                return;
-            }
-            else
-            {
-                MessageBox.Show("Thông tin đã Lưu", "Lưu Thành Công",
-                    buttons: MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
-
-            }
-            init();
-            reset();
-        }
-
         private void txtSDT_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
@@ -88,6 +46,45 @@ namespace LibraryManagement
         {
             dataDocGia.DataSource = new DocGiaBUS().DocGiaList();
 
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtMaDocGia.Text = "";
+            txtTenDocGia.Text = "";
+            txtSDT.Text = "";
+            dateBirthDay.Value = DateTime.Now;
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (txtSearch.Text == "")
+                dataDocGia.DataSource = new DocGiaBUS().DocGiaList();
+
+            else
+                if (rdTenDocGia.Checked)
+                    dataDocGia.DataSource = new DocGiaBUS().LoadDocGiaByName(txtSearch.Text);
+                else
+                    dataDocGia.DataSource = new DocGiaBUS().LoadDocGiaByID(txtSearch.Text);
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (rdbtnAdd.Checked)
+            {
+                if (new DocGiaBUS().AddDocGia(txtMaDocGia.Text, txtTenDocGia.Text, 
+                    txtSDT.Text, dateBirthDay.Value))
+                    MessageBox.Show("Thêm Thành Công", "SUCCCESS", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                else
+                    MessageBox.Show("Không thể thêm độc giả", "ERROR", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+            }
+        }
+
+        private void dataDocGia_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            ShowDataToTextBox(dataDocGia);
         }
     }
 }
