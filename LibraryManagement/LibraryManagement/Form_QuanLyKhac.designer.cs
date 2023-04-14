@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabNCC = new System.Windows.Forms.TabPage();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.dataNhaCungCap = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
@@ -87,7 +87,7 @@
             this.rdMaTacGia = new System.Windows.Forms.RadioButton();
             this.rdTenTacGia = new System.Windows.Forms.RadioButton();
             this.tabFormQLKhac = new System.Windows.Forms.TabControl();
-            this.tabPage2.SuspendLayout();
+            this.tabNCC.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataNhaCungCap)).BeginInit();
             this.tableLayoutPanel7.SuspendLayout();
@@ -109,19 +109,19 @@
             this.tabFormQLKhac.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabPage2
+            // tabNCC
             // 
-            this.tabPage2.Controls.Add(this.groupBox6);
-            this.tabPage2.Controls.Add(this.tableLayoutPanel7);
-            this.tabPage2.Controls.Add(this.groupBox3);
-            this.tabPage2.Controls.Add(this.groupBox4);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1916, 1022);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Nhà Cung Cấp";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabNCC.Controls.Add(this.groupBox6);
+            this.tabNCC.Controls.Add(this.tableLayoutPanel7);
+            this.tabNCC.Controls.Add(this.groupBox3);
+            this.tabNCC.Controls.Add(this.groupBox4);
+            this.tabNCC.Location = new System.Drawing.Point(4, 29);
+            this.tabNCC.Name = "tabNCC";
+            this.tabNCC.Padding = new System.Windows.Forms.Padding(3);
+            this.tabNCC.Size = new System.Drawing.Size(1916, 1022);
+            this.tabNCC.TabIndex = 1;
+            this.tabNCC.Text = "Nhà Cung Cấp";
+            this.tabNCC.UseVisualStyleBackColor = true;
             // 
             // groupBox6
             // 
@@ -152,6 +152,7 @@
             this.dataNhaCungCap.RowTemplate.Height = 24;
             this.dataNhaCungCap.Size = new System.Drawing.Size(1863, 542);
             this.dataNhaCungCap.TabIndex = 0;
+            this.dataNhaCungCap.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataNhaCungCap_CellMouseClick);
             // 
             // tableLayoutPanel7
             // 
@@ -187,6 +188,7 @@
             this.btnClear_NCC.TabIndex = 4;
             this.btnClear_NCC.Text = "Clear";
             this.btnClear_NCC.UseVisualStyleBackColor = true;
+            this.btnClear_NCC.Click += new System.EventHandler(this.btnClear_NCC_Click);
             // 
             // btnSave_NCC
             // 
@@ -199,6 +201,7 @@
             this.btnSave_NCC.TabIndex = 3;
             this.btnSave_NCC.Text = "Lưu";
             this.btnSave_NCC.UseVisualStyleBackColor = true;
+            this.btnSave_NCC.Click += new System.EventHandler(this.btnSave_NCC_Click);
             // 
             // rdbtnDelete_NCC
             // 
@@ -235,6 +238,7 @@
             this.rdbtnAdd_NCC.Text = "Thêm";
             this.rdbtnAdd_NCC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.rdbtnAdd_NCC.UseVisualStyleBackColor = true;
+            this.rdbtnAdd_NCC.Click += new System.EventHandler(this.rdbtnAdd_NCC_Click);
             // 
             // groupBox3
             // 
@@ -270,7 +274,6 @@
             // 
             // txtEmail_NCC
             // 
-            this.txtEmail_NCC.Enabled = false;
             this.txtEmail_NCC.Location = new System.Drawing.Point(319, 51);
             this.txtEmail_NCC.Name = "txtEmail_NCC";
             this.txtEmail_NCC.Size = new System.Drawing.Size(311, 27);
@@ -287,7 +290,6 @@
             // 
             // txtSDT_NCC
             // 
-            this.txtSDT_NCC.Enabled = false;
             this.txtSDT_NCC.Location = new System.Drawing.Point(319, 3);
             this.txtSDT_NCC.Name = "txtSDT_NCC";
             this.txtSDT_NCC.Size = new System.Drawing.Size(311, 27);
@@ -322,7 +324,6 @@
             // 
             // txtTenNCC
             // 
-            this.txtTenNCC.Enabled = false;
             this.txtTenNCC.Location = new System.Drawing.Point(353, 50);
             this.txtTenNCC.Name = "txtTenNCC";
             this.txtTenNCC.Size = new System.Drawing.Size(344, 27);
@@ -830,7 +831,7 @@
             // tabFormQLKhac
             // 
             this.tabFormQLKhac.Controls.Add(this.tabTacGia);
-            this.tabFormQLKhac.Controls.Add(this.tabPage2);
+            this.tabFormQLKhac.Controls.Add(this.tabNCC);
             this.tabFormQLKhac.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabFormQLKhac.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabFormQLKhac.Location = new System.Drawing.Point(0, 0);
@@ -838,6 +839,7 @@
             this.tabFormQLKhac.SelectedIndex = 0;
             this.tabFormQLKhac.Size = new System.Drawing.Size(1924, 1055);
             this.tabFormQLKhac.TabIndex = 0;
+            this.tabFormQLKhac.SelectedIndexChanged += new System.EventHandler(this.tabFormQLKhac_SelectedIndexChanged);
             // 
             // Form_QuanLyKhac
             // 
@@ -850,7 +852,7 @@
             this.Text = "Quản Lý Khác";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form_QuanLyKhac_Load);
-            this.tabPage2.ResumeLayout(false);
+            this.tabNCC.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataNhaCungCap)).EndInit();
             this.tableLayoutPanel7.ResumeLayout(false);
@@ -884,7 +886,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabNCC;
         private System.Windows.Forms.TabPage tabTacGia;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button btnClear_TG;

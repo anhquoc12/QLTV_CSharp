@@ -82,12 +82,7 @@ namespace LibraryManagement
 
         private void dataTacGia_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            DataGridViewRow row = dataTacGia.SelectedRows[0];
-
-            txtMaTacGia.Text = row.Cells["MaTacGia"].Value.ToString();
-            txtTenTacGia.Text = row.Cells["TenTacGia"].Value.ToString();
-            txtSDT_TacGia.Text = row.Cells["SDT"].Value.ToString();
-            txtEmail_TacGia.Text = row.Cells["Email"].Value.ToString();
+            ShowDataTacGiaToTextBox();
         }
 
         private void ShowDataTacGiaToTextBox()
@@ -149,6 +144,86 @@ namespace LibraryManagement
                 dataNhaCungCap.DataSource = nhacc.LoadNCCByName(txtSearch_NCC.Text);
             else
                 dataNhaCungCap.DataSource = nhacc.LoadNCCByID(txtSearch_NCC.Text);
+        }
+
+        private void rdbtnAdd_NCC_Click(object sender, EventArgs e)
+        {
+            using (var db = new QLTVEntities())
+            {
+                txtMaNCC.Text = u.CreateID_3("NCC", db.NhaCungCaps.ToList().Last().MaNCC);
+            }
+        }
+
+        private void btnClear_NCC_Click(object sender, EventArgs e)
+        {
+            txtMaNCC.Text = "";
+            txtTenNCC.Text = "";
+            txtSDT_NCC.Text = "";
+            txtEmail_NCC.Text = "";
+        }
+
+        private void btnSave_NCC_Click(object sender, EventArgs e)
+        {
+            if (rdbtnAdd_NCC.Checked) 
+            {
+                AddNCC();
+            }
+            else if (rdbtnEdit_NCC.Checked)
+            {
+                EditNCC();
+            }
+
+            dataNhaCungCap.DataSource = nhacc.NhaCCList();
+        }
+
+        private void AddNCC()
+        {
+            if (nhacc.AddNCC(txtMaNCC.Text, txtTenNCC.Text, txtSDT_NCC.Text, txtEmail_NCC.Text))
+                MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, 
+                    MessageBoxIcon.Information);
+            else
+                MessageBox.Show("Thêm thất bại", "Thông báo", MessageBoxButtons.OK, 
+                    MessageBoxIcon.Error);
+        }
+
+        private void EditNCC()
+        {
+            if (nhacc.EditNCC(txtMaNCC.Text, txtTenNCC.Text, txtSDT_NCC.Text, txtEmail_NCC.Text))
+                MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            else
+                MessageBox.Show("Sửa thất bại", "Thông báo", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+        }
+
+        private void ShowDataNCCShowToTextBox()
+        {
+            DataGridViewRow row = dataNhaCungCap.SelectedRows[0];
+
+            txtMaNCC.Text = row.Cells["MaNCC"].Value.ToString();
+            txtTenNCC.Text = row.Cells["TenNCC"].Value.ToString();
+            txtSDT_NCC.Text = row.Cells["SDT"].Value.ToString();
+            txtEmail_NCC.Text = row.Cells["Email"].Value.ToString();
+        }
+
+        private void dataNhaCungCap_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            ShowDataNCCShowToTextBox();
+        }
+
+        private void tabNCC_Click(object sender, EventArgs e)
+        {
+            ShowDataNCCShowToTextBox();
+        }
+
+        private void tabNCC_ChangeUICues(object sender, UICuesEventArgs e)
+        {
+            ShowDataNCCShowToTextBox();
+        }
+
+        private void tabFormQLKhac_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ShowDataNCCShowToTextBox();
         }
     }
 }
