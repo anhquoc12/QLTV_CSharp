@@ -11,28 +11,63 @@ namespace QLTV.BUS
 {
     public class DocGiaBUS
     {
-        public DocGiaBUS() { }
+        DocGiaDAO docgia;
+        public DocGiaBUS() 
+        {
+            docgia = new DocGiaDAO();
+        }
         public IEnumerable DocGiaList()
         {
-            return new DocGiaDAO().DocGiaList();
+            return docgia.DocGiaList();
         }
 
         public IEnumerable LoadDocGiaByID(string key)
         {
-            return new DocGiaDAO().LoadDocGiaByID(key);
+            return docgia.LoadDocGiaByID(key);
         }
 
         public IEnumerable LoadDocGiaByName(string key)
         {
-            return new DocGiaDAO().LoadDocGiaByName(key);
+            return docgia.LoadDocGiaByName(key);
         }
 
         public bool AddDocGia(string madocgia, string tendocgia, string sdt, DateTime ngaysinh)
         {
-            if (madocgia != "" || tendocgia == "" || sdt == "")
+            if (madocgia == "" || tendocgia == "" || sdt == "")
                 return false;
-            new DocGiaDAO().AddDocGia(tendocgia, sdt, ngaysinh);
-            return true;
+            else
+            {
+                DocGia d = new DocGia()
+                {
+                    MaDocGia = madocgia,
+                    TenDocGia = tendocgia,
+                    SDT = sdt,
+                    NgaySinh = ngaysinh
+                };
+                try
+                {
+                    docgia.AddDocGia(d);
+                    return true;
+                } catch (Exception ex) { return false; }
+            }
+        }
+
+        public bool EditSach(string madocgia, string tendocgia, string sdt, DateTime ngaysinh)
+        {
+            if (madocgia == "" || tendocgia == "" || sdt == "")
+                return false;
+            else
+            {
+                DocGia d = new DocGia()
+                {
+                    MaDocGia = madocgia,
+                    TenDocGia = tendocgia,
+                    SDT = sdt,
+                    NgaySinh = ngaysinh
+                };
+                docgia.EditDocGia(d);
+                return true;
+            }
         }
     }
 }

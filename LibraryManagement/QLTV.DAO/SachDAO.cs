@@ -164,47 +164,28 @@ namespace QLTV.DAO
             }
         }
 
-        public void AddSach(string tensach, string theloai, decimal gianhap, string matacgia, string mancc, int soluong)
+        public void AddSach(Sach s)
         {
             using (var db = new QLTVEntities())
             {
-                // Lấy mã cuối cùng
-                string str_id = db.Saches.ToList().Last().MaSach;
-
-                // chuyển về
-                int id = Convert.ToInt32(str_id.Substring(2, 4)) + 1;
-
-                // Tạo mã
-
-                string masach = "SA" + "0000".Substring(0, 6 - id.ToString().Length - 2) + id;
-                var sach = new Sach()
-                {
-                    MaSach = masach,
-                    TenSach = tensach,
-                    TheLoai = theloai,
-                    GiaNhap = gianhap,
-                    MaTacGia = matacgia,
-                    MaNCC = mancc,
-                    SoLuong = soluong
-                };
-                db.Saches.Add(sach);
+                db.Saches.Add(s);
                 db.SaveChanges();
             }
         }
 
-        public void EditSach(string masach, string tensach, string theloai, decimal gianhap, string matacgia, string mancc, int soluong)
+        public void EditSach(Sach s)
         {
             using (var db = new QLTVEntities())
             {
-                var sach = db.Saches.Find(masach);
+                var sach = db.Saches.Find(s.MaSach);
                 if (sach != null)
                 {
-                    sach.TenSach = tensach;
-                    sach.TheLoai = theloai;
-                    sach.GiaNhap = gianhap;
-                    sach.MaTacGia = matacgia;
-                    sach.MaNCC = mancc;
-                    sach.SoLuong = soluong;
+                    sach.TenSach = s.TenSach;
+                    sach.TheLoai = s.MaSach;
+                    sach.GiaNhap = s.GiaNhap;
+                    sach.MaTacGia = s.MaTacGia;
+                    sach.MaNCC = s.MaNCC;
+                    sach.SoLuong = s.SoLuong;
                     db.SaveChanges();
                 }
             }

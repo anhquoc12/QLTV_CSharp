@@ -25,5 +25,62 @@ namespace QLTV.DAO
                 return query.ToList();
             }
         }
+        public IEnumerable LoadTacGiaByID(string key)
+        {
+            using (var db = new QLTVEntities())
+            {
+                var query = db.TacGias.Select(tg => new
+                {
+                    tg.MaTacGia,
+                    tg.TenTacGia,
+                    tg.SDT,
+                    tg.Email
+                }).Where(q => q.MaTacGia.ToLower().Contains(key.ToLower()) ||
+                q.MaTacGia.ToLower().StartsWith(key.ToLower()) ||
+                q.MaTacGia.ToLower().EndsWith(key.ToLower()));
+                return query.ToList();
+            }
+        }
+
+        public IEnumerable LoadTacGiaByName(string key) 
+        {
+            using (var db = new QLTVEntities())
+            {
+                var query = db.TacGias.Select(tg => new
+                {
+                    tg.MaTacGia,
+                    tg.TenTacGia,
+                    tg.SDT,
+                    tg.Email
+                }).Where(q => q.TenTacGia.ToLower().Contains(key.ToLower()) ||
+                q.TenTacGia.ToLower().StartsWith(key.ToLower()) ||
+                q.TenTacGia.ToLower().EndsWith(key.ToLower()));
+                return query.ToList();
+            }
+        }
+
+        public void AddTacGia(TacGia tg)
+        {
+            using (var db = new QLTVEntities())
+            {
+                db.TacGias.Add(tg);
+                db.SaveChanges();
+            }
+        }
+
+        public void EditTacGia(TacGia tg)
+        {
+            using (var db = new QLTVEntities())
+            {
+                var tacgia = db.TacGias.Find(tg.MaTacGia);
+                if (tacgia != null) 
+                {
+                    tacgia.TenTacGia = tg.TenTacGia;
+                    tacgia.SDT = tg.SDT;
+                    tacgia.Email = tg.Email;
+                }
+                db.SaveChanges();
+            }
+        }
     }
 }

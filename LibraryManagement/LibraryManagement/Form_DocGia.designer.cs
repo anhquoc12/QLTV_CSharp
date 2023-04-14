@@ -341,6 +341,7 @@
             this.rdbtnAdd.Text = "Thêm";
             this.rdbtnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.rdbtnAdd.UseVisualStyleBackColor = true;
+            this.rdbtnAdd.Click += new System.EventHandler(this.rdbtnAdd_Click);
             // 
             // rdbtnEdit
             // 

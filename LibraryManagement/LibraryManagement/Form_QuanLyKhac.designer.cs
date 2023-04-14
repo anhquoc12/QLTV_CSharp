@@ -32,11 +32,11 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.dataNhaCungCap = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnCancle_NCC = new System.Windows.Forms.Button();
+            this.btnClear_NCC = new System.Windows.Forms.Button();
             this.btnSave_NCC = new System.Windows.Forms.Button();
-            this.btnDelete_NCC = new System.Windows.Forms.Button();
-            this.btnEdit_NCC = new System.Windows.Forms.Button();
-            this.btnAdd_NCC = new System.Windows.Forms.Button();
+            this.rdbtnDelete_NCC = new System.Windows.Forms.RadioButton();
+            this.rdbtnEdit_NCC = new System.Windows.Forms.RadioButton();
+            this.rdbtnAdd_NCC = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.txtEmail_NCC = new System.Windows.Forms.TextBox();
@@ -49,18 +49,18 @@
             this.txtMaNCC = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSearch_NCC = new System.Windows.Forms.Button();
             this.txtSearch_NCC = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.rdTenNCC = new System.Windows.Forms.RadioButton();
             this.rdMaNCC = new System.Windows.Forms.RadioButton();
             this.tabTacGia = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnCancle_TG = new System.Windows.Forms.Button();
+            this.btnClear_TG = new System.Windows.Forms.Button();
             this.btnSave_TG = new System.Windows.Forms.Button();
-            this.btnDelete_TG = new System.Windows.Forms.Button();
-            this.btnEdit_TG = new System.Windows.Forms.Button();
-            this.btnAdd_TG = new System.Windows.Forms.Button();
+            this.rdbtnAdd_TG = new System.Windows.Forms.RadioButton();
+            this.rdbtnEdit_TG = new System.Windows.Forms.RadioButton();
+            this.rdbtnDelete_TG = new System.Windows.Forms.RadioButton();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dataTacGia = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
@@ -81,12 +81,12 @@
             this.txtMaTacGia = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnSearch_TG = new System.Windows.Forms.Button();
+            this.txtSearch_TG = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.rdMaTacGia = new System.Windows.Forms.RadioButton();
             this.rdTenTacGia = new System.Windows.Forms.RadioButton();
-            this.tabNhaCC = new System.Windows.Forms.TabControl();
+            this.tabFormQLKhac = new System.Windows.Forms.TabControl();
             this.tabPage2.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataNhaCungCap)).BeginInit();
@@ -106,7 +106,7 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.tabNhaCC.SuspendLayout();
+            this.tabFormQLKhac.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage2
@@ -159,11 +159,11 @@
             this.tableLayoutPanel7.ColumnCount = 1;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel7.Controls.Add(this.btnCancle_NCC, 0, 4);
+            this.tableLayoutPanel7.Controls.Add(this.btnClear_NCC, 0, 4);
             this.tableLayoutPanel7.Controls.Add(this.btnSave_NCC, 0, 3);
-            this.tableLayoutPanel7.Controls.Add(this.btnDelete_NCC, 0, 2);
-            this.tableLayoutPanel7.Controls.Add(this.btnEdit_NCC, 0, 1);
-            this.tableLayoutPanel7.Controls.Add(this.btnAdd_NCC, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.rdbtnDelete_NCC, 0, 2);
+            this.tableLayoutPanel7.Controls.Add(this.rdbtnEdit_NCC, 0, 1);
+            this.tableLayoutPanel7.Controls.Add(this.rdbtnAdd_NCC, 0, 0);
             this.tableLayoutPanel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel7.Location = new System.Drawing.Point(1457, 203);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
@@ -176,72 +176,65 @@
             this.tableLayoutPanel7.Size = new System.Drawing.Size(111, 165);
             this.tableLayoutPanel7.TabIndex = 8;
             // 
-            // btnCancle_NCC
+            // btnClear_NCC
             // 
-            this.btnCancle_NCC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnClear_NCC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancle_NCC.Enabled = false;
-            this.btnCancle_NCC.Location = new System.Drawing.Point(3, 135);
-            this.btnCancle_NCC.Name = "btnCancle_NCC";
-            this.btnCancle_NCC.Size = new System.Drawing.Size(105, 27);
-            this.btnCancle_NCC.TabIndex = 4;
-            this.btnCancle_NCC.Text = "Hủy";
-            this.btnCancle_NCC.UseVisualStyleBackColor = true;
-            this.btnCancle_NCC.Click += new System.EventHandler(this.btnCancle_NCC_Click);
+            this.btnClear_NCC.Location = new System.Drawing.Point(3, 135);
+            this.btnClear_NCC.Name = "btnClear_NCC";
+            this.btnClear_NCC.Size = new System.Drawing.Size(105, 27);
+            this.btnClear_NCC.TabIndex = 4;
+            this.btnClear_NCC.Text = "Clear";
+            this.btnClear_NCC.UseVisualStyleBackColor = true;
             // 
             // btnSave_NCC
             // 
             this.btnSave_NCC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave_NCC.Enabled = false;
             this.btnSave_NCC.Location = new System.Drawing.Point(3, 102);
             this.btnSave_NCC.Name = "btnSave_NCC";
             this.btnSave_NCC.Size = new System.Drawing.Size(105, 27);
             this.btnSave_NCC.TabIndex = 3;
             this.btnSave_NCC.Text = "Lưu";
             this.btnSave_NCC.UseVisualStyleBackColor = true;
-            this.btnSave_NCC.Click += new System.EventHandler(this.btnSave_NCC_Click);
             // 
-            // btnDelete_NCC
+            // rdbtnDelete_NCC
             // 
-            this.btnDelete_NCC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelete_NCC.Enabled = false;
-            this.btnDelete_NCC.Location = new System.Drawing.Point(3, 69);
-            this.btnDelete_NCC.Name = "btnDelete_NCC";
-            this.btnDelete_NCC.Size = new System.Drawing.Size(105, 27);
-            this.btnDelete_NCC.TabIndex = 2;
-            this.btnDelete_NCC.Text = "Xóa";
-            this.btnDelete_NCC.UseVisualStyleBackColor = true;
+            this.rdbtnDelete_NCC.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rdbtnDelete_NCC.Location = new System.Drawing.Point(3, 69);
+            this.rdbtnDelete_NCC.Name = "rdbtnDelete_NCC";
+            this.rdbtnDelete_NCC.Size = new System.Drawing.Size(105, 27);
+            this.rdbtnDelete_NCC.TabIndex = 7;
+            this.rdbtnDelete_NCC.TabStop = true;
+            this.rdbtnDelete_NCC.Text = "Xóa";
+            this.rdbtnDelete_NCC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rdbtnDelete_NCC.UseVisualStyleBackColor = true;
             // 
-            // btnEdit_NCC
+            // rdbtnEdit_NCC
             // 
-            this.btnEdit_NCC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEdit_NCC.Enabled = false;
-            this.btnEdit_NCC.Location = new System.Drawing.Point(3, 36);
-            this.btnEdit_NCC.Name = "btnEdit_NCC";
-            this.btnEdit_NCC.Size = new System.Drawing.Size(105, 27);
-            this.btnEdit_NCC.TabIndex = 1;
-            this.btnEdit_NCC.Text = "Sửa";
-            this.btnEdit_NCC.UseVisualStyleBackColor = true;
+            this.rdbtnEdit_NCC.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rdbtnEdit_NCC.Location = new System.Drawing.Point(3, 36);
+            this.rdbtnEdit_NCC.Name = "rdbtnEdit_NCC";
+            this.rdbtnEdit_NCC.Size = new System.Drawing.Size(105, 27);
+            this.rdbtnEdit_NCC.TabIndex = 6;
+            this.rdbtnEdit_NCC.TabStop = true;
+            this.rdbtnEdit_NCC.Text = "Sửa";
+            this.rdbtnEdit_NCC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rdbtnEdit_NCC.UseVisualStyleBackColor = true;
             // 
-            // btnAdd_NCC
+            // rdbtnAdd_NCC
             // 
-            this.btnAdd_NCC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd_NCC.Location = new System.Drawing.Point(3, 3);
-            this.btnAdd_NCC.Name = "btnAdd_NCC";
-            this.btnAdd_NCC.Size = new System.Drawing.Size(105, 27);
-            this.btnAdd_NCC.TabIndex = 0;
-            this.btnAdd_NCC.Text = "Thêm";
-            this.btnAdd_NCC.UseVisualStyleBackColor = true;
-            this.btnAdd_NCC.Click += new System.EventHandler(this.btnAdd_NCC_Click);
+            this.rdbtnAdd_NCC.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rdbtnAdd_NCC.Location = new System.Drawing.Point(3, 3);
+            this.rdbtnAdd_NCC.Name = "rdbtnAdd_NCC";
+            this.rdbtnAdd_NCC.Size = new System.Drawing.Size(105, 27);
+            this.rdbtnAdd_NCC.TabIndex = 5;
+            this.rdbtnAdd_NCC.TabStop = true;
+            this.rdbtnAdd_NCC.Text = "Thêm";
+            this.rdbtnAdd_NCC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rdbtnAdd_NCC.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -363,7 +356,7 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.button2);
+            this.groupBox4.Controls.Add(this.btnSearch_NCC);
             this.groupBox4.Controls.Add(this.txtSearch_NCC);
             this.groupBox4.Controls.Add(this.tableLayoutPanel4);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -374,15 +367,16 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Tìm Kiếm Nhà Cung Cấp";
             // 
-            // button2
+            // btnSearch_NCC
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(547, 72);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(108, 35);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Tìm Kiếm";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSearch_NCC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSearch_NCC.Location = new System.Drawing.Point(547, 72);
+            this.btnSearch_NCC.Name = "btnSearch_NCC";
+            this.btnSearch_NCC.Size = new System.Drawing.Size(108, 35);
+            this.btnSearch_NCC.TabIndex = 2;
+            this.btnSearch_NCC.Text = "Tìm Kiếm";
+            this.btnSearch_NCC.UseVisualStyleBackColor = true;
+            this.btnSearch_NCC.Click += new System.EventHandler(this.btnSearch_NCC_Click);
             // 
             // txtSearch_NCC
             // 
@@ -450,14 +444,13 @@
             this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Controls.Add(this.btnCancle_TG, 0, 4);
+            this.tableLayoutPanel3.Controls.Add(this.btnClear_TG, 0, 4);
             this.tableLayoutPanel3.Controls.Add(this.btnSave_TG, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.btnDelete_TG, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.btnEdit_TG, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.btnAdd_TG, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.rdbtnAdd_TG, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.rdbtnEdit_TG, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.rdbtnDelete_TG, 0, 2);
             this.tableLayoutPanel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(1766, 192);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(1753, 179);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 5;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -465,75 +458,71 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(111, 165);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(124, 178);
             this.tableLayoutPanel3.TabIndex = 7;
             // 
-            // btnCancle_TG
+            // btnClear_TG
             // 
-            this.btnCancle_TG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.btnClear_TG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancle_TG.Enabled = false;
-            this.btnCancle_TG.Location = new System.Drawing.Point(3, 135);
-            this.btnCancle_TG.Name = "btnCancle_TG";
-            this.btnCancle_TG.Size = new System.Drawing.Size(105, 27);
-            this.btnCancle_TG.TabIndex = 4;
-            this.btnCancle_TG.Text = "Hủy";
-            this.btnCancle_TG.UseVisualStyleBackColor = true;
-            this.btnCancle_TG.Click += new System.EventHandler(this.btnCancle_TG_Click);
+            this.btnClear_TG.Location = new System.Drawing.Point(3, 143);
+            this.btnClear_TG.Name = "btnClear_TG";
+            this.btnClear_TG.Size = new System.Drawing.Size(118, 32);
+            this.btnClear_TG.TabIndex = 4;
+            this.btnClear_TG.Text = "Clear";
+            this.btnClear_TG.UseVisualStyleBackColor = true;
+            this.btnClear_TG.Click += new System.EventHandler(this.btnClear_TG_Click);
             // 
             // btnSave_TG
             // 
             this.btnSave_TG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave_TG.Enabled = false;
-            this.btnSave_TG.Location = new System.Drawing.Point(3, 102);
+            this.btnSave_TG.Location = new System.Drawing.Point(3, 108);
             this.btnSave_TG.Name = "btnSave_TG";
-            this.btnSave_TG.Size = new System.Drawing.Size(105, 27);
+            this.btnSave_TG.Size = new System.Drawing.Size(118, 29);
             this.btnSave_TG.TabIndex = 3;
             this.btnSave_TG.Text = "Lưu";
             this.btnSave_TG.UseVisualStyleBackColor = true;
             this.btnSave_TG.Click += new System.EventHandler(this.btnSave_TG_Click);
             // 
-            // btnDelete_TG
+            // rdbtnAdd_TG
             // 
-            this.btnDelete_TG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelete_TG.Enabled = false;
-            this.btnDelete_TG.Location = new System.Drawing.Point(3, 69);
-            this.btnDelete_TG.Name = "btnDelete_TG";
-            this.btnDelete_TG.Size = new System.Drawing.Size(105, 27);
-            this.btnDelete_TG.TabIndex = 2;
-            this.btnDelete_TG.Text = "Xóa";
-            this.btnDelete_TG.UseVisualStyleBackColor = true;
+            this.rdbtnAdd_TG.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rdbtnAdd_TG.Location = new System.Drawing.Point(3, 3);
+            this.rdbtnAdd_TG.Name = "rdbtnAdd_TG";
+            this.rdbtnAdd_TG.Size = new System.Drawing.Size(118, 29);
+            this.rdbtnAdd_TG.TabIndex = 5;
+            this.rdbtnAdd_TG.TabStop = true;
+            this.rdbtnAdd_TG.Text = "Thêm";
+            this.rdbtnAdd_TG.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rdbtnAdd_TG.UseVisualStyleBackColor = true;
+            this.rdbtnAdd_TG.Click += new System.EventHandler(this.rdbtnAdd_TG_Click);
             // 
-            // btnEdit_TG
+            // rdbtnEdit_TG
             // 
-            this.btnEdit_TG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEdit_TG.Enabled = false;
-            this.btnEdit_TG.Location = new System.Drawing.Point(3, 36);
-            this.btnEdit_TG.Name = "btnEdit_TG";
-            this.btnEdit_TG.Size = new System.Drawing.Size(105, 27);
-            this.btnEdit_TG.TabIndex = 1;
-            this.btnEdit_TG.Text = "Sửa";
-            this.btnEdit_TG.UseVisualStyleBackColor = true;
+            this.rdbtnEdit_TG.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rdbtnEdit_TG.Location = new System.Drawing.Point(3, 38);
+            this.rdbtnEdit_TG.Name = "rdbtnEdit_TG";
+            this.rdbtnEdit_TG.Size = new System.Drawing.Size(118, 29);
+            this.rdbtnEdit_TG.TabIndex = 6;
+            this.rdbtnEdit_TG.TabStop = true;
+            this.rdbtnEdit_TG.Text = "Sửa";
+            this.rdbtnEdit_TG.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rdbtnEdit_TG.UseVisualStyleBackColor = true;
             // 
-            // btnAdd_TG
+            // rdbtnDelete_TG
             // 
-            this.btnAdd_TG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd_TG.Location = new System.Drawing.Point(3, 3);
-            this.btnAdd_TG.Name = "btnAdd_TG";
-            this.btnAdd_TG.Size = new System.Drawing.Size(105, 27);
-            this.btnAdd_TG.TabIndex = 0;
-            this.btnAdd_TG.Text = "Thêm";
-            this.btnAdd_TG.UseVisualStyleBackColor = true;
-            this.btnAdd_TG.Click += new System.EventHandler(this.btnAdd_TG_Click);
+            this.rdbtnDelete_TG.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rdbtnDelete_TG.Location = new System.Drawing.Point(3, 73);
+            this.rdbtnDelete_TG.Name = "rdbtnDelete_TG";
+            this.rdbtnDelete_TG.Size = new System.Drawing.Size(118, 29);
+            this.rdbtnDelete_TG.TabIndex = 7;
+            this.rdbtnDelete_TG.TabStop = true;
+            this.rdbtnDelete_TG.Text = "Xóa";
+            this.rdbtnDelete_TG.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rdbtnDelete_TG.UseVisualStyleBackColor = true;
             // 
             // groupBox5
             // 
@@ -564,6 +553,7 @@
             this.dataTacGia.RowTemplate.Height = 24;
             this.dataTacGia.Size = new System.Drawing.Size(1854, 572);
             this.dataTacGia.TabIndex = 0;
+            this.dataTacGia.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataTacGia_CellMouseClick);
             // 
             // tableLayoutPanel5
             // 
@@ -688,7 +678,6 @@
             // 
             // txtEmail_TacGia
             // 
-            this.txtEmail_TacGia.Enabled = false;
             this.txtEmail_TacGia.Location = new System.Drawing.Point(287, 49);
             this.txtEmail_TacGia.Name = "txtEmail_TacGia";
             this.txtEmail_TacGia.Size = new System.Drawing.Size(295, 27);
@@ -714,7 +703,6 @@
             // 
             // txtSDT_TacGia
             // 
-            this.txtSDT_TacGia.Enabled = false;
             this.txtSDT_TacGia.Location = new System.Drawing.Point(287, 3);
             this.txtSDT_TacGia.Name = "txtSDT_TacGia";
             this.txtSDT_TacGia.Size = new System.Drawing.Size(295, 27);
@@ -740,7 +728,6 @@
             // 
             // txtTenTacGia
             // 
-            this.txtTenTacGia.Enabled = false;
             this.txtTenTacGia.Location = new System.Drawing.Point(342, 49);
             this.txtTenTacGia.Name = "txtTenTacGia";
             this.txtTenTacGia.Size = new System.Drawing.Size(355, 27);
@@ -774,8 +761,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.btnSearch_TG);
+            this.groupBox1.Controls.Add(this.txtSearch_TG);
             this.groupBox1.Controls.Add(this.tableLayoutPanel1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(8, 15);
@@ -785,21 +772,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm Kiếm Tác giả";
             // 
-            // button1
+            // btnSearch_TG
             // 
-            this.button1.Location = new System.Drawing.Point(637, 77);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 35);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Tìm Kiếm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSearch_TG.Location = new System.Drawing.Point(637, 77);
+            this.btnSearch_TG.Name = "btnSearch_TG";
+            this.btnSearch_TG.Size = new System.Drawing.Size(108, 35);
+            this.btnSearch_TG.TabIndex = 2;
+            this.btnSearch_TG.Text = "Tìm Kiếm";
+            this.btnSearch_TG.UseVisualStyleBackColor = true;
+            this.btnSearch_TG.Click += new System.EventHandler(this.btnSearch_TG_Click);
             // 
-            // textBox1
+            // txtSearch_TG
             // 
-            this.textBox1.Location = new System.Drawing.Point(400, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(345, 27);
-            this.textBox1.TabIndex = 1;
+            this.txtSearch_TG.Location = new System.Drawing.Point(400, 36);
+            this.txtSearch_TG.Name = "txtSearch_TG";
+            this.txtSearch_TG.Size = new System.Drawing.Size(345, 27);
+            this.txtSearch_TG.TabIndex = 1;
             // 
             // tableLayoutPanel1
             // 
@@ -839,24 +827,24 @@
             this.rdTenTacGia.Text = "Tên Tác Giả";
             this.rdTenTacGia.UseVisualStyleBackColor = true;
             // 
-            // tabNhaCC
+            // tabFormQLKhac
             // 
-            this.tabNhaCC.Controls.Add(this.tabTacGia);
-            this.tabNhaCC.Controls.Add(this.tabPage2);
-            this.tabNhaCC.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabNhaCC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabNhaCC.Location = new System.Drawing.Point(0, 0);
-            this.tabNhaCC.Name = "tabNhaCC";
-            this.tabNhaCC.SelectedIndex = 0;
-            this.tabNhaCC.Size = new System.Drawing.Size(1924, 1055);
-            this.tabNhaCC.TabIndex = 0;
+            this.tabFormQLKhac.Controls.Add(this.tabTacGia);
+            this.tabFormQLKhac.Controls.Add(this.tabPage2);
+            this.tabFormQLKhac.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabFormQLKhac.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabFormQLKhac.Location = new System.Drawing.Point(0, 0);
+            this.tabFormQLKhac.Name = "tabFormQLKhac";
+            this.tabFormQLKhac.SelectedIndex = 0;
+            this.tabFormQLKhac.Size = new System.Drawing.Size(1924, 1055);
+            this.tabFormQLKhac.TabIndex = 0;
             // 
             // Form_QuanLyKhac
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1924, 1055);
-            this.Controls.Add(this.tabNhaCC);
+            this.Controls.Add(this.tabFormQLKhac);
             this.MaximizeBox = false;
             this.Name = "Form_QuanLyKhac";
             this.Text = "Quản Lý Khác";
@@ -889,7 +877,7 @@
             this.groupBox1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.tabNhaCC.ResumeLayout(false);
+            this.tabFormQLKhac.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -899,11 +887,8 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabTacGia;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Button btnCancle_TG;
+        private System.Windows.Forms.Button btnClear_TG;
         private System.Windows.Forms.Button btnSave_TG;
-        private System.Windows.Forms.Button btnDelete_TG;
-        private System.Windows.Forms.Button btnEdit_TG;
-        private System.Windows.Forms.Button btnAdd_TG;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.DataGridView dataTacGia;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
@@ -923,14 +908,14 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnSearch_TG;
+        private System.Windows.Forms.TextBox txtSearch_TG;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.RadioButton rdMaTacGia;
         private System.Windows.Forms.RadioButton rdTenTacGia;
-        private System.Windows.Forms.TabControl tabNhaCC;
+        private System.Windows.Forms.TabControl tabFormQLKhac;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSearch_NCC;
         private System.Windows.Forms.TextBox txtSearch_NCC;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.RadioButton rdTenNCC;
@@ -948,12 +933,15 @@
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.DataGridView dataNhaCungCap;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.Button btnCancle_NCC;
+        private System.Windows.Forms.Button btnClear_NCC;
         private System.Windows.Forms.Button btnSave_NCC;
-        private System.Windows.Forms.Button btnDelete_NCC;
-        private System.Windows.Forms.Button btnEdit_NCC;
-        private System.Windows.Forms.Button btnAdd_NCC;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
+        private System.Windows.Forms.RadioButton rdbtnDelete_NCC;
+        private System.Windows.Forms.RadioButton rdbtnEdit_NCC;
+        private System.Windows.Forms.RadioButton rdbtnAdd_NCC;
+        private System.Windows.Forms.RadioButton rdbtnAdd_TG;
+        private System.Windows.Forms.RadioButton rdbtnEdit_TG;
+        private System.Windows.Forms.RadioButton rdbtnDelete_TG;
     }
 }

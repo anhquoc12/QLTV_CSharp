@@ -1,26 +1,21 @@
-﻿
+﻿using QLTV.BUS;
 using QLTV.DTO;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.Entity;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using QLTV.BUS;
-using QLTV.DTO;
-using System.Data.Entity.Core.Metadata.Edm;
 
 namespace LibraryManagement
 {
     public partial class Form_DocGia : Form
     {
+        DocGiaBUS docgia;
+        Utils u;
         public Form_DocGia()
         {
             InitializeComponent();
+            docgia = new DocGiaBUS();
+            u = new Utils();
+            u.SetPropertiesDataGridView(dataDocGia);
         }
 
         private void ShowDataToTextBox(DataGridView data)
@@ -44,7 +39,7 @@ namespace LibraryManagement
 
         private void Form_DocGia_Load(object sender, EventArgs e)
         {
-            dataDocGia.DataSource = new DocGiaBUS().DocGiaList();
+            dataDocGia.DataSource = docgia.DocGiaList();
 
         }
 
@@ -59,32 +54,62 @@ namespace LibraryManagement
         private void btnSearch_Click(object sender, EventArgs e)
         {
             if (txtSearch.Text == "")
-                dataDocGia.DataSource = new DocGiaBUS().DocGiaList();
+                dataDocGia.DataSource = docgia.DocGiaList();
 
             else
                 if (rdTenDocGia.Checked)
-                    dataDocGia.DataSource = new DocGiaBUS().LoadDocGiaByName(txtSearch.Text);
-                else
-                    dataDocGia.DataSource = new DocGiaBUS().LoadDocGiaByID(txtSearch.Text);
+                dataDocGia.DataSource = docgia.LoadDocGiaByName(txtSearch.Text);
+            else
+                dataDocGia.DataSource = docgia.LoadDocGiaByID(txtSearch.Text);
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (rdbtnAdd.Checked)
             {
-                if (new DocGiaBUS().AddDocGia(txtMaDocGia.Text, txtTenDocGia.Text, 
-                    txtSDT.Text, dateBirthDay.Value))
-                    MessageBox.Show("Thêm Thành Công", "SUCCCESS", MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
-                else
-                    MessageBox.Show("Không thể thêm độc giả", "ERROR", MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
+                AddReader();
             }
+            else if (rdbtnEdit.Checked)
+            {
+                EditReader();
+            }
+
+            dataDocGia.DataSource = docgia.DocGiaList();
         }
 
         private void dataDocGia_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             ShowDataToTextBox(dataDocGia);
+        }
+
+        private void AddReader()
+        {
+            if (docgia.AddDocGia(txtMaDocGia.Text, txtTenDocGia.Text,
+                    txtSDT.Text, dateBirthDay.Value.Date))
+                MessageBox.Show("Thêm Thành Công", "SUCCCESS", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            else
+                MessageBox.Show("Không thể thêm độc giả", "ERROR", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+        }
+
+        private void EditReader()
+        {
+            if (docgia.EditSach(txtMaDocGia.Text, txtTenDocGia.Text,
+                    txtSDT.Text, dateBirthDay.Value.Date))
+                MessageBox.Show("Sửa thông tin Thành Công", "SUCCCESS", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            else
+                MessageBox.Show("Không thể Sửa thông tin độc giả", "ERROR", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+        }
+
+        private void rdbtnAdd_Click(object sender, EventArgs e)
+        {
+            using (var db = new QLTVEntities())
+            {
+                txtMaDocGia.Text = u.CreateID_4("DG", db.DocGias.ToList().Last().MaDocGia);
+            }
         }
     }
 }

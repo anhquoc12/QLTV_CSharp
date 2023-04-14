@@ -56,10 +56,10 @@
             this.dataSach = new System.Windows.Forms.DataGridView();
             this.btnClear = new System.Windows.Forms.Button();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.rdbtnAdd = new System.Windows.Forms.RadioButton();
+            this.btnLuu = new System.Windows.Forms.Button();
             this.rdbtnEdit = new System.Windows.Forms.RadioButton();
             this.rdbtnDelete = new System.Windows.Forms.RadioButton();
-            this.btnLuu = new System.Windows.Forms.Button();
+            this.rdbtnAdd = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -442,17 +442,15 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(97, 204);
             this.tableLayoutPanel3.TabIndex = 5;
             // 
-            // rdbtnAdd
+            // btnLuu
             // 
-            this.rdbtnAdd.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rdbtnAdd.Location = new System.Drawing.Point(3, 3);
-            this.rdbtnAdd.Name = "rdbtnAdd";
-            this.rdbtnAdd.Size = new System.Drawing.Size(91, 34);
-            this.rdbtnAdd.TabIndex = 3;
-            this.rdbtnAdd.TabStop = true;
-            this.rdbtnAdd.Text = "Thêm";
-            this.rdbtnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.rdbtnAdd.UseVisualStyleBackColor = true;
+            this.btnLuu.Location = new System.Drawing.Point(3, 123);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(91, 34);
+            this.btnLuu.TabIndex = 6;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // rdbtnEdit
             // 
@@ -478,15 +476,18 @@
             this.rdbtnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.rdbtnDelete.UseVisualStyleBackColor = true;
             // 
-            // btnLuu
+            // rdbtnAdd
             // 
-            this.btnLuu.Location = new System.Drawing.Point(3, 123);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(91, 34);
-            this.btnLuu.TabIndex = 6;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = true;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            this.rdbtnAdd.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rdbtnAdd.Location = new System.Drawing.Point(3, 3);
+            this.rdbtnAdd.Name = "rdbtnAdd";
+            this.rdbtnAdd.Size = new System.Drawing.Size(91, 34);
+            this.rdbtnAdd.TabIndex = 3;
+            this.rdbtnAdd.TabStop = true;
+            this.rdbtnAdd.Text = "Thêm";
+            this.rdbtnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rdbtnAdd.UseVisualStyleBackColor = true;
+            this.rdbtnAdd.Click += new System.EventHandler(this.rdbtnAdd_Click);
             // 
             // Form_QuanLySach
             // 

@@ -19,7 +19,7 @@ namespace QLTV.DTO
         {
             this.ChiTietPhieuMuons = new HashSet<ChiTietPhieuMuon>();
         }
-    
+
         public string MaSach { get; set; }
         public string TenSach { get; set; }
         public string TheLoai { get; set; }

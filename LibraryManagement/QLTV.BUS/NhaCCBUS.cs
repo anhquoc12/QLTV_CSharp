@@ -10,10 +10,24 @@ namespace QLTV.BUS
 {
     public class NhaCCBUS
     {
-        public NhaCCBUS() { }
+        NhaCCDAO ncc;
+        public NhaCCBUS() 
+        {
+            ncc = new NhaCCDAO();
+        }
         public IEnumerable NhaCCList()
         {
             return new NhaCCDAO().NhaCCList();
+        }
+
+        public IEnumerable LoadNCCByID(string key)
+        {
+            return ncc.LoadNCCByID(key);
+        }
+
+        public IEnumerable LoadNCCByName(string key)
+        {
+            return ncc.LoadNCCByName(key);
         }
     }
 }

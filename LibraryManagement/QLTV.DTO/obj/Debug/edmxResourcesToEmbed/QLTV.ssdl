@@ -4,7 +4,7 @@
     <Key>
       <PropertyRef Name="MaCTPM" />
     </Key>
-    <Property Name="MaCTPM" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="MaCTPM" Type="varchar" MaxLength="10" Nullable="false" />
     <Property Name="MaSach" Type="varchar" MaxLength="6" Nullable="false" />
     <Property Name="SoLuong" Type="int" Nullable="false" />
     <Property Name="MaPM" Type="varchar" MaxLength="6" Nullable="false" />

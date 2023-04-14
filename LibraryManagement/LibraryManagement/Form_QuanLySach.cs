@@ -11,18 +11,22 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using QLTV.DTO;
 using System.Data.Entity;
-
+using LibraryManagement;
 
 namespace BTL_LTCSDL_QLThưViện
 {
     public partial class Form_QuanLySach : Form
     {
+        SachBUS sach;
+        Utils u;
         public Form_QuanLySach()
         {
             InitializeComponent();
+            u = new Utils();
+            sach = new SachBUS();
         }
 
-        private void ShowDataToTextBox(DataGridView data)
+        private void ShowDataToTextBox()
         {
             DataGridViewRow row = dataSach.SelectedRows[0];
 
@@ -55,8 +59,9 @@ namespace BTL_LTCSDL_QLThưViện
 
         private void Form_QuanLySach_Load(object sender, EventArgs e)
         {
-            dataSach.DataSource = new SachBUS().SachList();
-            ShowDataToTextBox(dataSach);
+            u.SetPropertiesDataGridView(dataSach);
+            dataSach.DataSource = sach.SachList();
+            ShowDataToTextBox();
             comTacGia.DataSource = new TacGiaBUS().TacGiaList();
             comTacGia.DisplayMember = "TenTacGia";
             comTacGia.ValueMember = "MaTacGia";
@@ -69,15 +74,15 @@ namespace BTL_LTCSDL_QLThưViện
         private void btnSearch_Click(object sender, EventArgs e)
         {
             if (txtSearch.Text == "")
-                dataSach.DataSource = new SachBUS().SachList();
+                dataSach.DataSource = sach.SachList();
             else
             {
                 if (rdMaSach.Checked)
-                    dataSach.DataSource = new SachBUS().LoadSachByID(txtSearch.Text);
+                    dataSach.DataSource = sach.LoadSachByID(txtSearch.Text);
                 else if (rdTenSach.Checked)
-                    dataSach.DataSource = new SachBUS().LoadSachBySach(txtSearch.Text);
+                    dataSach.DataSource = sach.LoadSachBySach(txtSearch.Text);
                 else
-                    dataSach.DataSource = new SachBUS().LoadSachByTacGia(txtSearch.Text);
+                    dataSach.DataSource = sach.LoadSachByTacGia(txtSearch.Text);
             }
 
         }
@@ -85,7 +90,7 @@ namespace BTL_LTCSDL_QLThưViện
         private void dataSach_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             
-            ShowDataToTextBox(dataSach);
+            ShowDataToTextBox();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -103,31 +108,48 @@ namespace BTL_LTCSDL_QLThưViện
         {
             if (rdbtnAdd.Checked) 
             {
-                if (new SachBUS().AddSach(txtTenSach.Text, txtLoaiSach.Text,
-                    txtGia.Text,
-                    comTacGia.SelectedValue.ToString(),
-                    comNhaCungCap.SelectedValue.ToString(),
-                   txtSoLuong.Text))
-                    MessageBox.Show("Thêm Thành Công", "SUCCCESS", MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
-                else
-                    MessageBox.Show("Không thể thêm sách", "ERROR", MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
-                dataSach.DataSource = new SachBUS().SachList();
+                AddBook();
             }
             else if (rdbtnEdit.Checked) 
             {
-                if (new SachBUS().EditSach(txtMaSach.Text, txtTenSach.Text, txtLoaiSach.Text,
-                txtGia.Text, comTacGia.SelectedValue.ToString(),
-                comNhaCungCap.SelectedValue.ToString(), txtSoLuong.Text))
-                    MessageBox.Show("Sửa Thành Công", "SUCCCESS", MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
-                else
-                    MessageBox.Show("Không thể sửa sách", "ERROR", MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
-                dataSach.DataSource = new SachBUS().SachList();
+                EditBook();
             }
             else { MessageBox.Show("Xóa"); }
+        }
+
+        private void rdbtnAdd_Click(object sender, EventArgs e)
+        {
+            using (var db = new QLTVEntities())
+            {
+                txtMaSach.Text = new Utils().CreateID_4("SA", db.Saches.ToList().Last().MaSach);
+            }
+        }
+
+
+        private void AddBook()
+        {
+            if (sach.AddSach(txtMaSach.Text, txtTenSach.Text, txtLoaiSach.Text, txtGia.Text,
+                comTacGia.SelectedValue.ToString(), comNhaCungCap.SelectedValue.ToString(),
+                txtSoLuong.Text))
+                MessageBox.Show("Thêm Thành Công", "SUCCCESS", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            else
+                MessageBox.Show("Không thể thêm sách", "ERROR", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            dataSach.DataSource = sach.SachList();
+        }
+
+        private void EditBook()
+        {
+            if (sach.EditSach(txtMaSach.Text, txtTenSach.Text, txtLoaiSach.Text,
+                txtGia.Text, comTacGia.SelectedValue.ToString(),
+                comNhaCungCap.SelectedValue.ToString(), txtSoLuong.Text))
+                MessageBox.Show("Sửa Thành Công", "SUCCCESS", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            else
+                MessageBox.Show("Không thể sửa sách", "ERROR", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            dataSach.DataSource = sach.SachList();
         }
     }
 }

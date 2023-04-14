@@ -62,30 +62,29 @@ namespace QLTV.DAO
             }
         }
 
-        public void AddDocGia(string tendocgia, string phone, DateTime ngaysinh)
+        public void AddDocGia(DocGia d)
         {
 
             using (var db = new QLTVEntities())
             {
-                // Lấy mã cuối cùng
-                string str_id = db.Saches.ToList().Last().MaSach;
-
-                // chuyển về
-                int id = Convert.ToInt32(str_id.Substring(2, 4)) + 1;
-
-                // Tạo mã
-
-                string madocgia = "DG" + "0000".Substring(0, 6 - id.ToString().Length - 2) + id;
-                var docgia = new DocGia()
-                {
-                    MaDocGia = madocgia,
-                    TenDocGia = tendocgia,
-                    SDT = phone,
-                    NgaySinh = ngaysinh
-                };
-                db.DocGias.Add(docgia);
+                db.DocGias.Add(d);
                 db.SaveChanges();
 
+            }
+        }
+
+        public void EditDocGia(DocGia d)
+        {
+            using (var db = new QLTVEntities())
+            {
+                var docgia = db.DocGias.Find(d.MaDocGia);
+                if (docgia != null) 
+                {
+                    docgia.TenDocGia = d.TenDocGia;
+                    docgia.SDT = d.SDT;
+                    docgia.NgaySinh = d.NgaySinh;
+                    db.SaveChanges();
+                }
             }
         }
     }

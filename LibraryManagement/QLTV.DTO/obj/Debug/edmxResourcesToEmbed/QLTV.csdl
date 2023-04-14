@@ -4,7 +4,7 @@
     <Key>
       <PropertyRef Name="MaCTPM" />
     </Key>
-    <Property Name="MaCTPM" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MaCTPM" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="MaSach" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="SoLuong" Type="Int32" Nullable="false" />
     <Property Name="MaPM" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />

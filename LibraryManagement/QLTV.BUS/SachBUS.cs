@@ -12,34 +12,52 @@ namespace QLTV.BUS
 {
     public class SachBUS
     {
-        public SachBUS() { }
+        SachDAO sach;
+        public SachBUS() 
+        {
+            sach = new SachDAO();        
+        }
         public IEnumerable SachList()
         {
-            return new SachDAO().SachList();
+            return sach.SachList();
         }
 
         public IEnumerable LoadSachByID(string key)
         {
-            return new SachDAO().LoadSachByID(key);
+            return sach.LoadSachByID(key);
         }
 
         public IEnumerable LoadSachBySach(string key)
         {
-            return new SachDAO().LoadSachBySach(key);
+            return sach.LoadSachBySach(key);
         }
         public IEnumerable LoadSachByTacGia(string key)
         {
-            return new SachDAO().LoadSachByTacGia(key);
+            return sach.LoadSachByTacGia(key);
         }
 
-        public bool AddSach(string tensach, string theloai, string gianhap, string matacgia, string mancc, string soluong)
+        public Boolean AddSach(string masach, string tensach, string theloai, string gianhap, string matacgia, string mancc, string soluong)
         {
-            if (tensach != "" || theloai == "" || gianhap == "" || soluong == "")
+            if (tensach == "" || theloai == "" || gianhap == "" || soluong == "")
                 return false;
             else
             {
-                new SachDAO().AddSach(tensach, theloai, decimal.Parse(gianhap), matacgia, mancc, Convert.ToInt32(soluong));
-                return true;
+                Sach s = new Sach()
+                {
+                    MaSach = masach,
+                    TenSach = tensach,
+                    TheLoai = theloai,
+                    GiaNhap = decimal.Parse(gianhap),
+                    MaTacGia = matacgia,
+                    MaNCC = mancc,
+                    SoLuong = Convert.ToInt32(soluong)
+                };
+                try
+                {
+                    sach.AddSach(s);
+                    return true;
+                }
+                catch (Exception ex) { return false; }
             }
         }
 
@@ -49,9 +67,21 @@ namespace QLTV.BUS
                 return false;
             else 
             {
-                new SachDAO().EditSach(masach, tensach, theloai, decimal.Parse(gianhap), matacgia, mancc, Convert.ToInt32(soluong));
+                Sach s = new Sach()
+                {
+                    MaSach = masach,
+                    TenSach = tensach,
+                    TheLoai = theloai,
+                    GiaNhap = decimal.Parse(gianhap),
+                    MaTacGia = matacgia,
+                    MaNCC = mancc,
+                    SoLuong = Convert.ToInt32(soluong)
+                };
+                sach.EditSach(s);
                 return true;
             }
         }
+
+
     }
 }
