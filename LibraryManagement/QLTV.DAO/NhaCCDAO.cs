@@ -71,16 +71,16 @@ namespace QLTV.DAO
             }
         }
 
-        public void EditNCC(string madocgia, string tendocgia, string sdt, DateTime ngaysinh)
+        public void EditNCC(NhaCungCap ncc)
         {
             using (var db = new QLTVEntities())
             {
-                var docgia = db.DocGias.Find(madocgia);
-                if (docgia != null)
+                var nhacc = db.NhaCungCaps.Find(ncc.MaNCC);
+                if (nhacc != null)
                 {
-                    docgia.TenDocGia = tendocgia;
-                    docgia.SDT = sdt;
-                    docgia.NgaySinh = ngaysinh;
+                    nhacc.TenNCC = ncc.TenNCC;
+                    nhacc.SDT = ncc.SDT;
+                    nhacc.Email = ncc.Email;
                     db.SaveChanges();
                 }
             }

@@ -24,15 +24,15 @@ namespace LibraryManagement
 
         public string CreateID_4(string key, string str_id)
         {
-
-            // chuyển về
             int id = Convert.ToInt32(str_id.Substring(2, 4)) + 1;
-
-            // Tạo mã
-
             return key + "0000".Substring(0, 6 - id.ToString().Length - 2) + id;
         }
 
+        public string CreateID_3(string key, string str_id)
+        {
+            int id = Convert.ToInt32(str_id.Substring(3, 3)) + 1;
+            return key + "000".Substring(0, 6 - id.ToString().Length - 3) + id;
+        }
 
     }
 }

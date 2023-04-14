@@ -1,4 +1,5 @@
 ﻿using QLTV.DAO;
+using QLTV.DTO;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -28,6 +29,50 @@ namespace QLTV.BUS
         public IEnumerable LoadNCCByName(string key)
         {
             return ncc.LoadNCCByName(key);
+        }
+
+        public bool AddNCC(string maNCC, string tenNCC, string sdt, string email)
+        {
+            if (maNCC == "" || tenNCC == "" || sdt == "" || email == "")
+                return false;
+            else
+            {
+                try
+                {
+                    NhaCungCap nhacc = new NhaCungCap()
+                    {
+                        MaNCC = maNCC,
+                        TenNCC = tenNCC,
+                        SDT = sdt,
+                        Email = email
+                    };
+                    ncc.AddNCC(nhacc);
+                    return true;
+                }
+                catch (Exception ex) { return false; }
+            }
+        }
+
+        public bool EditNCC(string maNCC, string tenNCC, string sdt, string email)
+        {
+            if (maNCC == "" || tenNCC == "" || sdt == "" || email == "")
+                return false;
+            else
+            {
+                try
+                {
+                    NhaCungCap nhacc = new NhaCungCap()
+                    {
+                        MaNCC = maNCC,
+                        TenNCC = tenNCC,
+                        SDT = sdt,
+                        Email = email
+                    };
+                    ncc.EditNCC(nhacc);
+                    return true;
+                }
+                catch (Exception ex) { return false; }
+            }
         }
     }
 }
