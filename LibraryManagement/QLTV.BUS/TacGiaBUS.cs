@@ -71,7 +71,22 @@ namespace QLTV.BUS
                     tacgia.EditTacGia(tg);
                     return true;
                 }
-                catch (Exception ex) { return false; }
+                catch { return false; }
+            }
+        }
+
+        public bool DeleteTacGia(string id)
+        {
+            if (id == "")
+                return false;
+            else
+            {
+                try
+                {
+                    tacgia.DeleteTacGia(id);
+                    return true;
+                }
+                catch { return false; }
             }
         }
     }

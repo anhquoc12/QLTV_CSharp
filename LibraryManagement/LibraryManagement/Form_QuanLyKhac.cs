@@ -38,6 +38,11 @@ namespace LibraryManagement
             {
                 EditTacGia();
             }
+            else if (rdbtnDelete_TG.Checked)
+            { 
+                DeleteTacGia(); 
+            }
+
 
             dataTacGia.DataSource = tacgia.TacGiaList();
         }
@@ -115,22 +120,34 @@ namespace LibraryManagement
         {
             if (tacgia.AddTacGia(txtMaTacGia.Text, txtTenTacGia.Text, 
                 txtSDT_TacGia.Text, txtEmail_TacGia.Text))
-                MessageBox.Show("Thêm Thành Công", "SUCCCESS", MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
-            else
-                MessageBox.Show("Không thể thêm tác giả", "ERROR", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                u.Message("Thêm Tác giả", 
+                    "Add Successfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
+             else
+                 u.Message("Thêm Tác giả", 
+                     "Bạn chưa nhập đủ thông tin hoặc chưa chọn nút Thêm", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void EditTacGia()
         {
             if (tacgia.EditTacGia(txtMaTacGia.Text, txtTenTacGia.Text,
                 txtSDT_TacGia.Text, txtEmail_TacGia.Text))
-                MessageBox.Show("Sửa Thành Công", "SUCCCESS", MessageBoxButtons.OK,
+                u.Message("Sửa thông tin tác giả", "Edit Successful", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             else
-                MessageBox.Show("Không thể sửa tác giả", "ERROR", MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                u.Message("Sửa thông tin tác giả",
+                    "Không thể sửa thông tin khi chưa chọn thông tin nhà cung cấp",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void DeleteTacGia()
+        {
+            if (tacgia.DeleteTacGia(txtMaTacGia.Text))
+                u.Message("Xoá Tác giả", 
+                    "Delete Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                u.Message("Xoá Tác giả", 
+                    "Do còn Sách của tác giả " + txtTenTacGia.Text + " nên không thể xoá.",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void btnSearch_NCC_Click(object sender, EventArgs e)
@@ -172,6 +189,15 @@ namespace LibraryManagement
             {
                 EditNCC();
             }
+            else if (rdbtnDelete_NCC.Checked)
+            {
+                DeleteNCC();
+            }
+            else
+            {
+                u.Message("WARNING", "Bạn chưa chọn hành động nào để lưu",
+                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
             dataNhaCungCap.DataSource = nhacc.NhaCCList();
         }
@@ -179,21 +205,35 @@ namespace LibraryManagement
         private void AddNCC()
         {
             if (nhacc.AddNCC(txtMaNCC.Text, txtTenNCC.Text, txtSDT_NCC.Text, txtEmail_NCC.Text))
-                MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK, 
-                    MessageBoxIcon.Information);
+                u.Message("Thêm Nhà Cung Cấp", 
+                    "Add Successfull", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
-                MessageBox.Show("Thêm thất bại", "Thông báo", MessageBoxButtons.OK, 
-                    MessageBoxIcon.Error);
+                u.Message("Thêm Nhà Cung Cấp", 
+                    "Bạn chưa nhập đủ thông tin hoặc chưa chọn nút Thêm", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void EditNCC()
         {
             if (nhacc.EditNCC(txtMaNCC.Text, txtTenNCC.Text, txtSDT_NCC.Text, txtEmail_NCC.Text))
-                MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
+                u.Message("Sửa thông tin Nhà Cung Cấp", 
+                    "Edit Successful", 
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
             else
-                MessageBox.Show("Sửa thất bại", "Thông báo", MessageBoxButtons.OK,
+                u.Message("Sửa thông tin Nhà Cung Cấp", 
+                    "Không thể sửa thông tin khi chưa chọn nhà cung cấp", 
+                    MessageBoxButtons.OK, 
                     MessageBoxIcon.Error);
+        }
+
+        private void DeleteNCC()
+        {
+
+            if (nhacc.DeleteNCC(txtMaNCC.Text))
+                u.Message("Xoá Nhà Cung Cấp", "Delete Successful",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else
+                u.Message("Xoá Nhà Cung Cấp", "Do còn Sách của nhà cung cấp " + txtTenNCC.Text + " nên không thể xoá.",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void ShowDataNCCShowToTextBox()

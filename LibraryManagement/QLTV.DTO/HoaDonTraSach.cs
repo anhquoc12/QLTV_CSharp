@@ -14,9 +14,9 @@ namespace QLTV.DTO
     
     public partial class HoaDonTraSach
     {
-        public string MaHD { get; set; }
+        public int MaHD { get; set; }
         public System.DateTime NgayLapHD { get; set; }
-        public string MaPM { get; set; }
+        public int MaPM { get; set; }
         public decimal TienThanhToan { get; set; }
     
         public virtual PhieuMuon PhieuMuon { get; set; }
