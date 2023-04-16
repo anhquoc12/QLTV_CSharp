@@ -73,6 +73,15 @@ namespace LibraryManagement
             {
                 EditReader();
             }
+            else if (rdbtnDelete.Checked)
+            {
+                DeleteReader();
+            }
+            else
+            {
+                u.Message("WARNING", "Bạn chưa chọn hành động nào để lưu",
+                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
             dataDocGia.DataSource = docgia.DocGiaList();
         }
@@ -86,22 +95,33 @@ namespace LibraryManagement
         {
             if (docgia.AddDocGia(txtMaDocGia.Text, txtTenDocGia.Text,
                     txtSDT.Text, dateBirthDay.Value.Date))
-                MessageBox.Show("Thêm Thành Công", "SUCCCESS", MessageBoxButtons.OK,
+                u.Message("Thêm Thông tin độc giả", "Add Successful", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             else
-                MessageBox.Show("Không thể thêm độc giả", "ERROR", MessageBoxButtons.OK,
+                u.Message("Thêm Thông tin độc giả", "Bạn chưa nhập đủ thông tin hoặc chưa chọn nút Thêm", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
         }
 
         private void EditReader()
         {
-            if (docgia.EditSach(txtMaDocGia.Text, txtTenDocGia.Text,
+            if (docgia.EditDocGia(txtMaDocGia.Text, txtTenDocGia.Text,
                     txtSDT.Text, dateBirthDay.Value.Date))
-                MessageBox.Show("Sửa thông tin Thành Công", "SUCCCESS", MessageBoxButtons.OK,
+                u.Message("Sửa thông tin độc giả", "Edit Successful", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             else
-                MessageBox.Show("Không thể Sửa thông tin độc giả", "ERROR", MessageBoxButtons.OK,
+                u.Message("Sửa thông tin độc giả", "Không thể sửa khi chưa chọn độc giả", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
+        }
+
+        private void DeleteReader()
+        {
+            if (docgia.DeleteDocGia(txtMaDocGia.Text))
+                u.Message("Xoá thông tin độc giả", "Delete Successful", MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            else
+                u.Message("Xoá thông tin độc giả", 
+                    "Không thể xoá độc giả khi chưa chọn độc giả hoặc độc giả đó chưa trả hết sách",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void rdbtnAdd_Click(object sender, EventArgs e)

@@ -14,10 +14,10 @@ namespace QLTV.DTO
     
     public partial class ChiTietPhieuMuon
     {
-        public string MaCTPM { get; set; }
+        public int MaCTPM { get; set; }
         public string MaSach { get; set; }
         public int SoLuong { get; set; }
-        public string MaPM { get; set; }
+        public int MaPM { get; set; }
         public decimal TienDatCoc { get; set; }
     
         public virtual PhieuMuon PhieuMuon { get; set; }

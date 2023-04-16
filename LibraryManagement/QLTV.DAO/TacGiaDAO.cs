@@ -82,5 +82,16 @@ namespace QLTV.DAO
                 db.SaveChanges();
             }
         }
+
+        public void DeleteTacGia(string primarykey)
+        {
+            using (var db = new QLTVEntities())
+            {
+                var query = db.TacGias.Where(tg => tg.MaTacGia == primarykey
+                            && db.Saches.All(s => s.MaTacGia != primarykey)).Select(t => t);
+                db.TacGias.Remove(query.FirstOrDefault());
+                db.SaveChanges();
+            }
+        }
     }
 }

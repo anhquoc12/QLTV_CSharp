@@ -114,7 +114,8 @@ namespace BTL_LTCSDL_QLThưViện
             {
                 EditBook();
             }
-            else { MessageBox.Show("Xóa"); }
+            else { u.Message("WARNING", "Bạn chưa chọn hành động nào để lưu", 
+                MessageBoxButtons.OK, MessageBoxIcon.Warning); }
         }
 
         private void rdbtnAdd_Click(object sender, EventArgs e)
@@ -131,10 +132,10 @@ namespace BTL_LTCSDL_QLThưViện
             if (sach.AddSach(txtMaSach.Text, txtTenSach.Text, txtLoaiSach.Text, txtGia.Text,
                 comTacGia.SelectedValue.ToString(), comNhaCungCap.SelectedValue.ToString(),
                 txtSoLuong.Text))
-                MessageBox.Show("Thêm Thành Công", "SUCCCESS", MessageBoxButtons.OK,
+                u.Message("Thêm Sách", "Add Successful", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             else
-                MessageBox.Show("Không thể thêm sách", "ERROR", MessageBoxButtons.OK,
+                u.Message("Thêm sách", "Bạn chưa nhập đủ thông tin hoặc chưa chọn nút Thêm\"", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             dataSach.DataSource = sach.SachList();
         }
@@ -144,10 +145,10 @@ namespace BTL_LTCSDL_QLThưViện
             if (sach.EditSach(txtMaSach.Text, txtTenSach.Text, txtLoaiSach.Text,
                 txtGia.Text, comTacGia.SelectedValue.ToString(),
                 comNhaCungCap.SelectedValue.ToString(), txtSoLuong.Text))
-                MessageBox.Show("Sửa Thành Công", "SUCCCESS", MessageBoxButtons.OK,
+                u.Message("Sửa thông tin Sách", "Edit Successful", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             else
-                MessageBox.Show("Không thể sửa sách", "ERROR", MessageBoxButtons.OK,
+                u.Message("Sửa thông tin Sách", "Không thể sửa thông tin khi chưa chọn Sách", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             dataSach.DataSource = sach.SachList();
         }

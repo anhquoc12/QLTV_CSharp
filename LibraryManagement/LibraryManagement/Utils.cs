@@ -34,5 +34,10 @@ namespace LibraryManagement
             return key + "000".Substring(0, 6 - id.ToString().Length - 3) + id;
         }
 
+        public DialogResult Message(String title, String content, MessageBoxButtons btn, MessageBoxIcon icon)
+        {
+            return MessageBox.Show(content, title, btn, icon);
+        }
+
     }
 }

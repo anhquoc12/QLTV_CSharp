@@ -85,5 +85,16 @@ namespace QLTV.DAO
                 }
             }
         }
+
+        public void DeleteNCC(string primarykey)
+        {
+            using (var db = new QLTVEntities())
+            {
+                var query = db.NhaCungCaps.Where(n => n.MaNCC == primarykey
+                             && db.Saches.All(s => s.MaNCC != primarykey)).Select(n => n);
+                db.NhaCungCaps.Remove(query.FirstOrDefault());
+                db.SaveChanges();
+            }
+        }
     }
 }

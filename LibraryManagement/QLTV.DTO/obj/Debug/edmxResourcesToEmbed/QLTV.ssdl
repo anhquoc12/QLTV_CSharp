@@ -4,10 +4,10 @@
     <Key>
       <PropertyRef Name="MaCTPM" />
     </Key>
-    <Property Name="MaCTPM" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="MaCTPM" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="MaSach" Type="varchar" MaxLength="6" Nullable="false" />
     <Property Name="SoLuong" Type="int" Nullable="false" />
-    <Property Name="MaPM" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="MaPM" Type="int" Nullable="false" />
     <Property Name="TienDatCoc" Type="money" Nullable="false" />
   </EntityType>
   <EntityType Name="DocGia">
@@ -23,9 +23,9 @@
     <Key>
       <PropertyRef Name="MaHD" />
     </Key>
-    <Property Name="MaHD" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="MaHD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="NgayLapHD" Type="datetime" Nullable="false" />
-    <Property Name="MaPM" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="MaPM" Type="int" Nullable="false" />
     <Property Name="TienThanhToan" Type="money" Nullable="false" />
   </EntityType>
   <EntityType Name="NhaCungCap">
@@ -41,7 +41,7 @@
     <Key>
       <PropertyRef Name="MaPM" />
     </Key>
-    <Property Name="MaPM" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="MaPM" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="NgayLapPhieu" Type="datetime" Nullable="false" />
     <Property Name="MaDocGia" Type="varchar" MaxLength="6" Nullable="false" />
   </EntityType>

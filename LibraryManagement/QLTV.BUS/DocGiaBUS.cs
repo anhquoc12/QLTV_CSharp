@@ -48,11 +48,11 @@ namespace QLTV.BUS
                 {
                     docgia.AddDocGia(d);
                     return true;
-                } catch (Exception ex) { return false; }
+                } catch { return false; }
             }
         }
 
-        public bool EditSach(string madocgia, string tendocgia, string sdt, DateTime ngaysinh)
+        public bool EditDocGia(string madocgia, string tendocgia, string sdt, DateTime ngaysinh)
         {
             if (madocgia == "" || tendocgia == "" || sdt == "")
                 return false;
@@ -65,8 +65,25 @@ namespace QLTV.BUS
                     SDT = sdt,
                     NgaySinh = ngaysinh
                 };
-                docgia.EditDocGia(d);
-                return true;
+                try
+                {
+                    docgia.EditDocGia(d);
+                    return true;
+                } catch { return false; }
+            }
+        }
+
+        public bool DeleteDocGia(String id)
+        {
+            if (id == "")
+                return false;
+            else
+            {
+                try
+                {
+                    docgia.DeleteDocGia(id);
+                    return true;
+                } catch { return false; }
             }
         }
     }

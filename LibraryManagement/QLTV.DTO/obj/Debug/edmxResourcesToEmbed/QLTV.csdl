@@ -4,10 +4,10 @@
     <Key>
       <PropertyRef Name="MaCTPM" />
     </Key>
-    <Property Name="MaCTPM" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MaCTPM" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="MaSach" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="SoLuong" Type="Int32" Nullable="false" />
-    <Property Name="MaPM" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MaPM" Type="Int32" Nullable="false" />
     <Property Name="TienDatCoc" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
     <NavigationProperty Name="PhieuMuon" Relationship="Self.FK_ChiTietPhieuMuon_PhieuMuon" FromRole="ChiTietPhieuMuon" ToRole="PhieuMuon" />
     <NavigationProperty Name="Sach" Relationship="Self.FK_ChiTietPhieuMuon_Sach" FromRole="ChiTietPhieuMuon" ToRole="Sach" />
@@ -26,9 +26,9 @@
     <Key>
       <PropertyRef Name="MaHD" />
     </Key>
-    <Property Name="MaHD" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MaHD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="NgayLapHD" Type="DateTime" Nullable="false" Precision="3" />
-    <Property Name="MaPM" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MaPM" Type="Int32" Nullable="false" />
     <Property Name="TienThanhToan" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
     <NavigationProperty Name="PhieuMuon" Relationship="Self.FK_HoaDonTraSach_PhieuMuon" FromRole="HoaDonTraSach" ToRole="PhieuMuon" />
   </EntityType>
@@ -46,7 +46,7 @@
     <Key>
       <PropertyRef Name="MaPM" />
     </Key>
-    <Property Name="MaPM" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MaPM" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="NgayLapPhieu" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="MaDocGia" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="ChiTietPhieuMuons" Relationship="Self.FK_ChiTietPhieuMuon_PhieuMuon" FromRole="PhieuMuon" ToRole="ChiTietPhieuMuon" />

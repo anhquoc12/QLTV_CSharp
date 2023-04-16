@@ -21,7 +21,7 @@ namespace QLTV.DTO
             this.HoaDonTraSaches = new HashSet<HoaDonTraSach>();
         }
     
-        public string MaPM { get; set; }
+        public int MaPM { get; set; }
         public System.DateTime NgayLapPhieu { get; set; }
         public string MaDocGia { get; set; }
     

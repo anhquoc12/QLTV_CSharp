@@ -57,7 +57,7 @@ namespace QLTV.BUS
                     sach.AddSach(s);
                     return true;
                 }
-                catch (Exception ex) { return false; }
+                catch { return false; }
             }
         }
 
@@ -77,8 +77,11 @@ namespace QLTV.BUS
                     MaNCC = mancc,
                     SoLuong = Convert.ToInt32(soluong)
                 };
-                sach.EditSach(s);
-                return true;
+                try
+                {
+                    sach.EditSach(s);
+                    return true;
+                } catch { return false; }
             }
         }
 

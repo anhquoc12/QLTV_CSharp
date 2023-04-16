@@ -12,7 +12,7 @@ namespace QLTV.BUS
     public class NhaCCBUS
     {
         NhaCCDAO ncc;
-        public NhaCCBUS() 
+        public NhaCCBUS()
         {
             ncc = new NhaCCDAO();
         }
@@ -49,7 +49,7 @@ namespace QLTV.BUS
                     ncc.AddNCC(nhacc);
                     return true;
                 }
-                catch (Exception ex) { return false; }
+                catch { return false; }
             }
         }
 
@@ -71,7 +71,22 @@ namespace QLTV.BUS
                     ncc.EditNCC(nhacc);
                     return true;
                 }
-                catch (Exception ex) { return false; }
+                catch { return false; }
+            }
+        }
+
+        public bool DeleteNCC(string id)
+        {
+            if (id == "")
+                return false;
+            else
+            {
+                try
+                {
+                    ncc.DeleteNCC(id);
+                    return true;
+                }
+                catch { return false; }
             }
         }
     }

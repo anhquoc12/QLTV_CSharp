@@ -42,19 +42,13 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnStat = new System.Windows.Forms.Button();
             this.btnExcel = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dateStat = new System.Windows.Forms.DateTimePicker();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.rdYear = new System.Windows.Forms.RadioButton();
-            this.rdMonth = new System.Windows.Forms.RadioButton();
             this.dataList = new System.Windows.Forms.DataGridView();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
@@ -63,12 +57,12 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dateStat);
             this.groupBox1.Controls.Add(this.tableLayoutPanel3);
-            this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(9, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(462, 250);
+            this.groupBox1.Size = new System.Drawing.Size(505, 147);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Bảng Điều Khiển";
@@ -82,7 +76,7 @@
             this.tableLayoutPanel3.Controls.Add(this.btnCancel, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.btnStat, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.btnExcel, 1, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(26, 187);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(23, 83);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -123,22 +117,11 @@
             this.btnExcel.Text = "Excel";
             this.btnExcel.UseVisualStyleBackColor = true;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.dateStat);
-            this.groupBox2.Controls.Add(this.tableLayoutPanel1);
-            this.groupBox2.Location = new System.Drawing.Point(6, 36);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(436, 126);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Thống Kê theo";
-            // 
             // dateStat
             // 
             this.dateStat.CustomFormat = "dd/MM/yyyy";
             this.dateStat.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateStat.Location = new System.Drawing.Point(23, 80);
+            this.dateStat.Location = new System.Drawing.Point(21, 38);
             this.dateStat.MaxDate = new System.DateTime(7309, 12, 20, 0, 0, 0, 0);
             this.dateStat.MinDate = new System.DateTime(1994, 6, 14, 0, 0, 0, 0);
             this.dateStat.Name = "dateStat";
@@ -146,54 +129,16 @@
             this.dateStat.TabIndex = 6;
             this.dateStat.Value = new System.DateTime(2022, 3, 22, 0, 0, 0, 0);
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.rdYear, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.rdMonth, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(20, 26);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(402, 32);
-            this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // rdYear
-            // 
-            this.rdYear.AutoSize = true;
-            this.rdYear.Location = new System.Drawing.Point(204, 3);
-            this.rdYear.Name = "rdYear";
-            this.rdYear.Size = new System.Drawing.Size(107, 24);
-            this.rdYear.TabIndex = 2;
-            this.rdYear.Text = "Theo Năm";
-            this.rdYear.UseVisualStyleBackColor = true;
-            // 
-            // rdMonth
-            // 
-            this.rdMonth.AutoSize = true;
-            this.rdMonth.Checked = true;
-            this.rdMonth.Location = new System.Drawing.Point(3, 3);
-            this.rdMonth.Name = "rdMonth";
-            this.rdMonth.Size = new System.Drawing.Size(118, 24);
-            this.rdMonth.TabIndex = 1;
-            this.rdMonth.TabStop = true;
-            this.rdMonth.Text = "Theo Tháng";
-            this.rdMonth.UseVisualStyleBackColor = true;
-            // 
             // dataList
             // 
-            this.dataList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.dataList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataList.Location = new System.Drawing.Point(9, 281);
+            this.dataList.Location = new System.Drawing.Point(15, 181);
             this.dataList.Name = "dataList";
             this.dataList.RowHeadersWidth = 51;
             this.dataList.RowTemplate.Height = 24;
-            this.dataList.Size = new System.Drawing.Size(462, 585);
+            this.dataList.Size = new System.Drawing.Size(505, 581);
             this.dataList.TabIndex = 2;
             // 
             // chart1
@@ -202,7 +147,7 @@
             this.chart1.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(535, 31);
+            this.chart1.Location = new System.Drawing.Point(535, 12);
             this.chart1.Name = "chart1";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
@@ -219,14 +164,14 @@
             this.chart2.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(535, 431);
+            this.chart2.Location = new System.Drawing.Point(535, 390);
             this.chart2.Name = "chart2";
             series2.ChartArea = "ChartArea1";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.chart2.Series.Add(series2);
-            this.chart2.Size = new System.Drawing.Size(500, 496);
+            this.chart2.Size = new System.Drawing.Size(550, 372);
             this.chart2.TabIndex = 4;
             this.chart2.Text = "chart2";
             // 
@@ -236,14 +181,14 @@
             this.chart3.ChartAreas.Add(chartArea3);
             legend3.Name = "Legend1";
             this.chart3.Legends.Add(legend3);
-            this.chart3.Location = new System.Drawing.Point(1082, 431);
+            this.chart3.Location = new System.Drawing.Point(1102, 390);
             this.chart3.Name = "chart3";
             series3.ChartArea = "ChartArea1";
             series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series3.Legend = "Legend1";
             series3.Name = "Series1";
             this.chart3.Series.Add(series3);
-            this.chart3.Size = new System.Drawing.Size(570, 482);
+            this.chart3.Size = new System.Drawing.Size(550, 372);
             this.chart3.TabIndex = 5;
             this.chart3.Text = "chart3";
             // 
@@ -269,9 +214,6 @@
             this.Load += new System.EventHandler(this.Form_Stat_Load);
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
@@ -283,10 +225,6 @@
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnStat;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.RadioButton rdYear;
-        private System.Windows.Forms.RadioButton rdMonth;
         private System.Windows.Forms.DataGridView dataList;
         private System.Windows.Forms.Button btnExcel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
