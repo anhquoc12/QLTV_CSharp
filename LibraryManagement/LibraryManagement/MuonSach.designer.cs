@@ -170,6 +170,7 @@
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(75, 31);
             this.btnHuy.TabIndex = 9;
+            this.btnHuy.TabStop = false;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
             // 
