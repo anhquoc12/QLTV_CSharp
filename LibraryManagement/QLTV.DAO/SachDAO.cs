@@ -165,6 +165,84 @@ namespace QLTV.DAO
             }
         }
 
+        public IEnumerable ListSachMuon()
+        {
+            using (var db = new QLTVEntities())
+            {
+                var query = db.Saches.Join(db.TacGias, s => s.MaTacGia, t => t.MaTacGia,
+                    (s, t) => new
+                    {
+                        s.MaSach,
+                        s.TenSach,
+                        s.TheLoai,
+                        s.GiaNhap,
+                        t.TenTacGia,
+                        s.SoLuong
+                    }).ToList().Select(s => new
+                    {
+                        s.MaSach,
+                        s.TenSach,
+                        s.TheLoai,
+                        GiaNhap = s.GiaNhap.ToString("#,##0.00"),
+                        s.TenTacGia,
+                        s.SoLuong
+                    }).Where(s => s.SoLuong >= 1);
+                return query.ToList();
+            }
+        }
+        public IEnumerable ListSachMuonByID(string key)
+        {
+            using (var db = new QLTVEntities())
+            {
+                var query = db.Saches.Join(db.TacGias, s => s.MaTacGia, t => t.MaTacGia,
+                    (s, t) => new
+                    {
+                        s.MaSach,
+                        s.TenSach,
+                        s.TheLoai,
+                        s.GiaNhap,
+                        t.TenTacGia,
+                        s.SoLuong
+                    }).ToList().Select(s => new
+                    {
+                        s.MaSach,
+                        s.TenSach,
+                        s.TheLoai,
+                        GiaNhap = s.GiaNhap.ToString("#,##0.00"),
+                        s.TenTacGia,
+                        s.SoLuong
+                    }).Where(q => q.SoLuong >= 1 && (q.MaSach.ToLower().Contains(key.ToLower()) || q.MaSach.ToLower().StartsWith(key.ToLower()) ||
+                    q.MaSach.ToLower().EndsWith(key.ToLower())));
+                return query.ToList();
+            }
+        }
+        public IEnumerable ListSachMuonByName(string key)
+        {
+            using (var db = new QLTVEntities())
+            {
+                var query = db.Saches.Join(db.TacGias, s => s.MaTacGia, t => t.MaTacGia,
+                    (s, t) => new
+                    {
+                        s.MaSach,
+                        s.TenSach,
+                        s.TheLoai,
+                        s.GiaNhap,
+                        t.TenTacGia,
+                        s.SoLuong
+                    }).ToList().Select(s => new
+                    {
+                        s.MaSach,
+                        s.TenSach,
+                        s.TheLoai,
+                        GiaNhap = s.GiaNhap.ToString("#,##0.00"),
+                        s.TenTacGia,
+                        s.SoLuong
+                    }).Where(q => q.SoLuong >= 1 && (q.TenSach.ToLower().Contains(key.ToLower()) || q.MaSach.ToLower().StartsWith(key.ToLower()) ||
+                    q.MaSach.ToLower().EndsWith(key.ToLower())));
+                return query.ToList();
+            }
+        }
+
         public void AddSach(Sach s)
         {
             using (var db = new QLTVEntities())
@@ -194,37 +272,30 @@ namespace QLTV.DAO
 
         public void DeleteSach(string id)
         {
-            using (var db = new QLTVEntities())
-            {
-                var sach = db.Saches.FirstOrDefault(s => s.MaSach == id);
+            //using (var db = new QLTVEntities())
+            //{
+            //    var sach = db.Saches.Single(s => s.MaSach == id);
+            //    if (sach != null)
+            //    {
+            //        bool canDelete = true;
 
-                if (sach != null)
-                {
-                    var ctm = db.ChiTietPhieuMuons.FirstOrDefault(c => c.MaSach == id);
-
-                    if (ctm != null)
-                    {
-                        var pm = db.ChiTietPhieuMuons.FirstOrDefault(p => p.MaPM == ctm.MaPM);
-
-                        if (pm != null)
-                        {
-                            var hd = db.HoaDonTraSaches.FirstOrDefault(h => h.MaPM == pm.MaPM);
-
-                            if (hd != null)
-                            {
-                                db.HoaDonTraSaches.Remove(hd);
-                            }
-
-                            db.PhieuMuons.Remove(pm);
-                        }
-
-                        db.ChiTietPhieuMuons.Remove(ctm);
-                    }
-
-                    db.Saches.Remove(sach);
-                    db.SaveChanges();
-                }
-            }
+            //        // Kiểm tra có trong chi tiết phiếu mượn
+            //        int ctmpcount = db.ChiTietPhieuMuons.Count(c => c. == id);
+            //        if (ctmpcount > 0)
+            //        {
+            //            // Kiểm tra sách đã trả hết chưa
+            //            int pm = db.PhieuMuons.Count(p => p.MaPM == );
+            //            int hd = db.HoaDonTraSaches.Join(db.PhieuMuons, h => h.MaPM, p => p.MaPM,
+            //            (h, p) => new { HoaDonTraSach = h, PhieuMuon = p })
+            //            .Count(h => h.PhieuMuon.MaDocGia == id);
+            //            if (pm > hd)
+            //            {
+            //                return;
+            //            }
+            //            canDelete = false;
+            //        }
+            //    }
+            //}
 
         }
     }

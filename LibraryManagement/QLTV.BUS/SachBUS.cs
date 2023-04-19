@@ -36,6 +36,20 @@ namespace QLTV.BUS
             return sach.LoadSachByTacGia(key);
         }
 
+        public IEnumerable ListSachMuon()
+        {
+            return new SachDAO().ListSachMuon();
+        }
+        public IEnumerable LoadSachMuonByID(string key)
+        {
+            return new SachDAO().ListSachMuonByID(key);
+        }
+        public IEnumerable LoadSachMuonByName(string key)
+        {
+            return new SachDAO().ListSachMuonByName(key);
+        }
+
+
         public Boolean AddSach(string masach, string tensach, string theloai, string gianhap, string matacgia, string mancc, string soluong)
         {
             if (tensach == "" || theloai == "" || gianhap == "" || soluong == "")

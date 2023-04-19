@@ -53,6 +53,7 @@
   <ItemGroup>
     <Compile Include="DocGiaDAO.cs" />
     <Compile Include="NhaCCDAO.cs" />
+    <Compile Include="PhieuMuonDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SachDAO.cs" />
     <Compile Include="TacGiaDAO.cs" />

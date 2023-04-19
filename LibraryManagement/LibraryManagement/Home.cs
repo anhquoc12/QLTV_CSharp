@@ -36,7 +36,7 @@ namespace LibraryManagement
 
         private void menuMuon_Tra_Click(object sender, EventArgs e)
         {
-            form_QLMuonTra f = new form_QLMuonTra();
+            MuonSach f = new MuonSach();
             f.Show();
         }
 
