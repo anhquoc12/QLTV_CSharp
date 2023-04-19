@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using QLTV.DTO;
-//using QLTV.BUS;
+using QLTV.DTO;
+using QLTV.BUS;
 
 
 namespace LibraryManagement
@@ -21,7 +21,6 @@ namespace LibraryManagement
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Home());
-            
         }
     }
 }

@@ -136,7 +136,7 @@
             this.txtSearch.Location = new System.Drawing.Point(409, 30);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(397, 27);
-            this.txtSearch.TabIndex = 2;
+            this.txtSearch.TabIndex = 0;
             // 
             // btnSave
             // 
@@ -145,7 +145,7 @@
             this.btnSave.Location = new System.Drawing.Point(3, 144);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(123, 41);
-            this.btnSave.TabIndex = 6;
+            this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -157,7 +157,7 @@
             this.btnClear.Location = new System.Drawing.Point(3, 191);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(123, 41);
-            this.btnClear.TabIndex = 7;
+            this.btnClear.TabIndex = 4;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -208,7 +208,7 @@
             this.txtSDT.Location = new System.Drawing.Point(247, 3);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(238, 27);
-            this.txtSDT.TabIndex = 11;
+            this.txtSDT.TabIndex = 0;
             this.txtSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSDT_KeyPress);
             // 
             // label5
@@ -228,7 +228,7 @@
             this.dateBirthDay.Location = new System.Drawing.Point(247, 60);
             this.dateBirthDay.Name = "dateBirthDay";
             this.dateBirthDay.Size = new System.Drawing.Size(238, 27);
-            this.dateBirthDay.TabIndex = 14;
+            this.dateBirthDay.TabIndex = 1;
             // 
             // tableLayoutPanel2
             // 
@@ -266,7 +266,7 @@
             this.txtMaDocGia.Location = new System.Drawing.Point(178, 3);
             this.txtMaDocGia.Name = "txtMaDocGia";
             this.txtMaDocGia.Size = new System.Drawing.Size(307, 27);
-            this.txtMaDocGia.TabIndex = 1;
+            this.txtMaDocGia.TabIndex = 0;
             // 
             // label3
             // 
@@ -283,7 +283,7 @@
             this.txtTenDocGia.Location = new System.Drawing.Point(178, 60);
             this.txtTenDocGia.Name = "txtTenDocGia";
             this.txtTenDocGia.Size = new System.Drawing.Size(307, 27);
-            this.txtTenDocGia.TabIndex = 3;
+            this.txtTenDocGia.TabIndex = 1;
             // 
             // groupBox3
             // 
@@ -336,7 +336,7 @@
             this.rdbtnAdd.Location = new System.Drawing.Point(3, 3);
             this.rdbtnAdd.Name = "rdbtnAdd";
             this.rdbtnAdd.Size = new System.Drawing.Size(123, 41);
-            this.rdbtnAdd.TabIndex = 10;
+            this.rdbtnAdd.TabIndex = 0;
             this.rdbtnAdd.TabStop = true;
             this.rdbtnAdd.Text = "Thêm";
             this.rdbtnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -349,7 +349,7 @@
             this.rdbtnEdit.Location = new System.Drawing.Point(3, 50);
             this.rdbtnEdit.Name = "rdbtnEdit";
             this.rdbtnEdit.Size = new System.Drawing.Size(123, 41);
-            this.rdbtnEdit.TabIndex = 9;
+            this.rdbtnEdit.TabIndex = 1;
             this.rdbtnEdit.TabStop = true;
             this.rdbtnEdit.Text = "Sửa";
             this.rdbtnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -361,7 +361,7 @@
             this.rdbtnDelete.Location = new System.Drawing.Point(3, 97);
             this.rdbtnDelete.Name = "rdbtnDelete";
             this.rdbtnDelete.Size = new System.Drawing.Size(123, 41);
-            this.rdbtnDelete.TabIndex = 8;
+            this.rdbtnDelete.TabIndex = 2;
             this.rdbtnDelete.TabStop = true;
             this.rdbtnDelete.Text = "Xóa";
             this.rdbtnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -388,7 +388,7 @@
             this.ShowIcon = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Quản Lý Độc Giả";
+            this.Text = "s";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form_DocGia_Load);
             this.gbSearch.ResumeLayout(false);

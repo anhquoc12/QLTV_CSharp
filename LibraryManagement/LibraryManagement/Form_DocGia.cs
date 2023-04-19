@@ -40,6 +40,8 @@ namespace LibraryManagement
         private void Form_DocGia_Load(object sender, EventArgs e)
         {
             dataDocGia.DataSource = docgia.DocGiaList();
+            ShowDataToTextBox(dataDocGia);
+            
 
         }
 
@@ -119,7 +121,7 @@ namespace LibraryManagement
                 u.Message("Xoá thông tin độc giả", "Delete Successful", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             else
-                u.Message("Xoá thông tin độc giả", 
+                u.Message("Xoá thông tin độc giả",
                     "Không thể xoá độc giả khi chưa chọn độc giả hoặc độc giả đó chưa trả hết sách",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
         }

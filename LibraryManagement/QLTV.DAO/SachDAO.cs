@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections;
+using System.Text.RegularExpressions;
 
 namespace QLTV.DAO
 {
@@ -189,6 +190,42 @@ namespace QLTV.DAO
                     db.SaveChanges();
                 }
             }
+        }
+
+        public void DeleteSach(string id)
+        {
+            using (var db = new QLTVEntities())
+            {
+                var sach = db.Saches.FirstOrDefault(s => s.MaSach == id);
+
+                if (sach != null)
+                {
+                    var ctm = db.ChiTietPhieuMuons.FirstOrDefault(c => c.MaSach == id);
+
+                    if (ctm != null)
+                    {
+                        var pm = db.ChiTietPhieuMuons.FirstOrDefault(p => p.MaPM == ctm.MaPM);
+
+                        if (pm != null)
+                        {
+                            var hd = db.HoaDonTraSaches.FirstOrDefault(h => h.MaPM == pm.MaPM);
+
+                            if (hd != null)
+                            {
+                                db.HoaDonTraSaches.Remove(hd);
+                            }
+
+                            db.PhieuMuons.Remove(pm);
+                        }
+
+                        db.ChiTietPhieuMuons.Remove(ctm);
+                    }
+
+                    db.Saches.Remove(sach);
+                    db.SaveChanges();
+                }
+            }
+
         }
     }
 }

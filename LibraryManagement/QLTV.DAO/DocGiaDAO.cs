@@ -92,19 +92,55 @@ namespace QLTV.DAO
         {
             using (var db = new QLTVEntities())
             {
-                int pm = db.PhieuMuons.Where(p => p.MaDocGia == id).GroupBy(p => p.MaDocGia).Count();
-                int hd = db.HoaDonTraSaches.Join(db.PhieuMuons, h => h.MaPM, p => p.MaPM,
-                                (h, p) => new
-                                {
-                                    HoaDonTraSach = h,
-                                    PhieuMuon = p
-                                }).Where(h => h.PhieuMuon.MaDocGia == id).GroupBy(p => p.HoaDonTraSach.MaPM).Count();
-                bool result = pm == hd;
-                var query = db.DocGias.Select(d => d).Where(
-                    d => d.MaDocGia == id && (db.PhieuMuons.All(p => p.MaDocGia != id)) || result);
-                db.DocGias.Remove(query.FirstOrDefault());
-                db.SaveChanges();
+                var docGia = db.DocGias.FirstOrDefault(d => d.MaDocGia == id);
+                if (docGia != null)
+                {
+                    bool canDelete = true;
+
+                    // Kiểm tra xem độc giả có phiếu mượn hay không
+                    int pmCount = db.PhieuMuons.Count(p => p.MaDocGia == id);
+                    if (pmCount > 0)
+                    {
+                        // Kiểm tra xem độc giả đã trả hết sách chưa
+                        int pm = db.PhieuMuons.Count(p => p.MaDocGia == id);
+                        int hd = db.HoaDonTraSaches.Join(db.PhieuMuons, h => h.MaPM, p => p.MaPM,
+                        (h, p) => new { HoaDonTraSach = h, PhieuMuon = p })
+                        .Count(h => h.PhieuMuon.MaDocGia == id);
+                        if (pm > hd)
+                        {
+                            return;
+                        }
+                        canDelete = false;
+
+                        // Xóa tất cả các hóa đơn trả sách liên quan đến các phiếu mượn của độc giả
+                        var hoaDonTraSachList = db.HoaDonTraSaches.Join(db.PhieuMuons, h => h.MaPM, p => p.MaPM,
+                            (h, p) => new { HoaDonTraSach = h, PhieuMuon = p })
+                            .Where(h => h.PhieuMuon.MaDocGia == id).ToList();
+
+                        foreach (var hoaDonTraSach in hoaDonTraSachList)
+                        {
+                            db.HoaDonTraSaches.Remove(hoaDonTraSach.HoaDonTraSach);
+                        }
+
+                        // Xóa tất cả các phiếu mượn của độc giả
+                        var phieuMuonList = db.PhieuMuons.Where(p => p.MaDocGia == id).ToList();
+
+                        foreach (var phieuMuon in phieuMuonList)
+                        {
+                            db.PhieuMuons.Remove(phieuMuon);
+                        }
+                    }
+
+                    if (canDelete)
+                    {
+                        db.DocGias.Remove(docGia);
+                        db.SaveChanges();
+                    }
+                }
             }
+
+
+
         }
     }
 }
