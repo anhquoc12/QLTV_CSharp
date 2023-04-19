@@ -58,3 +58,33 @@ D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\LibraryManagement\
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\QLTV.DAO.pdb
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\QLTV.DAO.dll.config
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.MuonSach.resources
+C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\LibraryManagement.exe.config
+C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\LibraryManagement.exe
+C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\LibraryManagement.pdb
+C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\EntityFramework.dll
+C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\QLTV.BUS.dll
+C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\QLTV.DTO.dll
+C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\QLTV.DAO.dll
+C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\QLTV.BUS.pdb
+C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\QLTV.BUS.dll.config
+C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\QLTV.DTO.pdb
+C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\QLTV.DTO.dll.config
+C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\EntityFramework.xml
+C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\QLTV.DAO.pdb
+C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\QLTV.DAO.dll.config
+C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csproj.AssemblyReference.cache
+C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csproj.SuggestedBindingRedirects.cache
+C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.Form_DocGia.resources
+C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.Form_QuanLyKhac.resources
+C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\obj\Debug\BTL_LTCSDL_QLThưViện.Form_QuanLySach.resources
+C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.Form_Stat.resources
+C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.Home.resources
+C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.MuonSach.resources
+C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.Properties.Resources.resources
+C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csproj.GenerateResource.cache
+C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csproj.CoreCompileInputs.cache
+C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csproj.CopyComplete
+C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.exe
+C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.pdb
