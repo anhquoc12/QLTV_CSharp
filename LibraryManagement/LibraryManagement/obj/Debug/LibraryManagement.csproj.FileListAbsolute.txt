@@ -58,3 +58,4 @@ D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\LibraryManagement\
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\QLTV.DTO.dll.config
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\QLTV.DAO.pdb
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\LibraryManagement\bin\Debug\QLTV.DAO.dll.config
+C:\Users\Admin\Documents\QLTV_CSharp\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.MuonSach.resources

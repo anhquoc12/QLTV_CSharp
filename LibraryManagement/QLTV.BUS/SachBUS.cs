@@ -53,5 +53,17 @@ namespace QLTV.BUS
                 return true;
             }
         }
+        public IEnumerable ListSachMuon()
+        {
+            return new SachDAO().ListSachMuon();
+        }
+        public IEnumerable LoadSachMuonByID(string key)
+        {
+            return new SachDAO().ListSachMuonByID(key);
+        }
+        public IEnumerable LoadSachMuonByName(string key)
+        {
+            return new SachDAO().ListSachMuonByName(key);
+        }
     }
 }

@@ -209,5 +209,83 @@ namespace QLTV.DAO
                 }
             }
         }
+        public IEnumerable ListSachMuon()
+        {
+            using (var db = new QLTVEntities())
+            {
+                var query = db.Saches.Join(db.TacGias, s => s.MaTacGia, t => t.MaTacGia,
+                    (s, t) => new
+                    {
+                        s.MaSach,
+                        s.TenSach,
+                        s.TheLoai,
+                        s.GiaNhap,
+                        t.TenTacGia,
+                        s.SoLuong
+                    }).ToList().Select(s => new
+                    {
+                        s.MaSach,
+                        s.TenSach,
+                        s.TheLoai,
+                        GiaNhap = s.GiaNhap.ToString("#,##0.00"),
+                        s.TenTacGia,
+                        s.SoLuong
+                    }).Where(s => s.SoLuong >=1);
+                return query.ToList();
+            }
+        }
+        public IEnumerable ListSachMuonByID(string key)
+        {
+            using (var db = new QLTVEntities())
+            {
+                var query = db.Saches.Join(db.TacGias, s => s.MaTacGia, t => t.MaTacGia,
+                    (s, t) => new
+                    {
+                        s.MaSach,
+                        s.TenSach,
+                        s.TheLoai,
+                        s.GiaNhap,
+                        t.TenTacGia,
+                        s.SoLuong
+                    }).ToList().Select(s => new
+                    {
+                        s.MaSach,
+                        s.TenSach,
+                        s.TheLoai,
+                        GiaNhap = s.GiaNhap.ToString("#,##0.00"),
+                        s.TenTacGia,
+                        s.SoLuong
+                    }).Where(q =>q.SoLuong >=1 && (q.MaSach.ToLower().Contains(key.ToLower()) || q.MaSach.ToLower().StartsWith(key.ToLower()) ||
+                    q.MaSach.ToLower().EndsWith(key.ToLower())));
+                return query.ToList();
+            }
+        }
+        public IEnumerable ListSachMuonByName(string key)
+        {
+            using (var db = new QLTVEntities())
+            {
+                var query = db.Saches.Join(db.TacGias, s => s.MaTacGia, t => t.MaTacGia,
+                    (s, t) => new
+                    {
+                        s.MaSach,
+                        s.TenSach,
+                        s.TheLoai,
+                        s.GiaNhap,
+                        t.TenTacGia,
+                        s.SoLuong
+                    }).ToList().Select(s => new
+                    {
+                        s.MaSach,
+                        s.TenSach,
+                        s.TheLoai,
+                        GiaNhap = s.GiaNhap.ToString("#,##0.00"),
+                        s.TenTacGia,
+                        s.SoLuong
+                    }).Where(q =>q.SoLuong >=1 && (q.TenSach.ToLower().Contains(key.ToLower()) || q.MaSach.ToLower().StartsWith(key.ToLower()) ||
+                    q.MaSach.ToLower().EndsWith(key.ToLower())));
+                return query.ToList();
+            }
+        }
+
     }
 }
