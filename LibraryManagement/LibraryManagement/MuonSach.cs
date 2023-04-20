@@ -14,6 +14,7 @@ namespace LibraryManagement
 {
     public partial class MuonSach : Form
     {
+        private PhieuMuonBUS phieumuonbus = new PhieuMuonBUS();
         public MuonSach()
         {
             InitializeComponent();
@@ -105,6 +106,17 @@ namespace LibraryManagement
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnLapPhieu_Click(object sender, EventArgs e)
+        {
+            phieumuonbus.LapPhieuMuon(DateTime.Now, lblMaDocGia.Text);
+            int lastid = phieumuonbus.LayIDPhieuMuonLonNhat();
+            foreach (DataGridViewRow r in dgSachMuon.Rows)
+            {
+                phieumuonbus.LapCTPM(r.Cells["MaSach"].Value.ToString(), 1, lastid, (decimal)r.Cells["GiaNhap"].Value);
+                //phieumuonbus.SetSoLuongSachTrongCTPM(r.Cells["MaSach"].Value.ToString(), (int)r.Cells["SoLuong"].Value);
             }
         }
     }

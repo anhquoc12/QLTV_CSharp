@@ -138,7 +138,6 @@
             this.SoLuong.HeaderText = "SoLuong";
             this.SoLuong.MinimumWidth = 6;
             this.SoLuong.Name = "SoLuong";
-            this.SoLuong.Visible = false;
             this.SoLuong.Width = 125;
             // 
             // groupBox3
@@ -310,6 +309,7 @@
             this.btnLapPhieu.TabIndex = 8;
             this.btnLapPhieu.Text = "Lập phiếu";
             this.btnLapPhieu.UseVisualStyleBackColor = true;
+            this.btnLapPhieu.Click += new System.EventHandler(this.btnLapPhieu_Click);
             // 
             // lblNgaySinh
             // 
@@ -462,13 +462,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnHuy;
+        private System.Windows.Forms.Button btnLapPhieu;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn TheLoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn GiaNhap;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenTacGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
-        private System.Windows.Forms.Button btnHuy;
-        private System.Windows.Forms.Button btnLapPhieu;
     }
 }
