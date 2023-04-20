@@ -36,18 +36,6 @@
             this.GiaNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenTacGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.rdTenSach = new System.Windows.Forms.RadioButton();
-            this.btnTimKiemSach = new System.Windows.Forms.Button();
-            this.rdMaSach = new System.Windows.Forms.RadioButton();
-            this.txtTimKiemSach = new System.Windows.Forms.TextBox();
-            this.dgSach = new System.Windows.Forms.DataGridView();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnTimKiemDG = new System.Windows.Forms.Button();
-            this.rdMaDocGia = new System.Windows.Forms.RadioButton();
-            this.rdTenDocGia = new System.Windows.Forms.RadioButton();
-            this.txtTimKiemDG = new System.Windows.Forms.TextBox();
-            this.dgDocGia = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLapPhieu = new System.Windows.Forms.Button();
@@ -61,27 +49,43 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.rdTenSach = new System.Windows.Forms.RadioButton();
+            this.btnTimKiemSach = new System.Windows.Forms.Button();
+            this.rdMaSach = new System.Windows.Forms.RadioButton();
+            this.txtTimKiemSach = new System.Windows.Forms.TextBox();
+            this.dgSach = new System.Windows.Forms.DataGridView();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnTimKiemDG = new System.Windows.Forms.Button();
+            this.rdMaDocGia = new System.Windows.Forms.RadioButton();
+            this.rdTenDocGia = new System.Windows.Forms.RadioButton();
+            this.txtTimKiemDG = new System.Windows.Forms.TextBox();
+            this.dgDocGia = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgSachMuon)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgSach)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgDocGia)).BeginInit();
-            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox1.Controls.Add(this.dgSachMuon);
-            this.groupBox1.Location = new System.Drawing.Point(12, 329);
+            this.groupBox1.Location = new System.Drawing.Point(12, 350);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(661, 405);
+            this.groupBox1.Size = new System.Drawing.Size(997, 517);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách mượn:";
             // 
             // dgSachMuon
             // 
+            this.dgSachMuon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.dgSachMuon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgSachMuon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaSach,
@@ -95,7 +99,7 @@
             this.dgSachMuon.RowHeadersWidth = 51;
             this.dgSachMuon.RowTemplate.Height = 24;
             this.dgSachMuon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgSachMuon.Size = new System.Drawing.Size(671, 384);
+            this.dgSachMuon.Size = new System.Drawing.Size(996, 490);
             this.dgSachMuon.TabIndex = 1;
             // 
             // MaSach
@@ -140,139 +144,6 @@
             this.SoLuong.Name = "SoLuong";
             this.SoLuong.Width = 125;
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.rdTenSach);
-            this.groupBox3.Controls.Add(this.btnTimKiemSach);
-            this.groupBox3.Controls.Add(this.rdMaSach);
-            this.groupBox3.Controls.Add(this.txtTimKiemSach);
-            this.groupBox3.Controls.Add(this.dgSach);
-            this.groupBox3.Location = new System.Drawing.Point(685, 329);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(661, 405);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Sách trong kho:";
-            // 
-            // rdTenSach
-            // 
-            this.rdTenSach.AutoSize = true;
-            this.rdTenSach.Location = new System.Drawing.Point(138, 38);
-            this.rdTenSach.Name = "rdTenSach";
-            this.rdTenSach.Size = new System.Drawing.Size(84, 20);
-            this.rdTenSach.TabIndex = 6;
-            this.rdTenSach.TabStop = true;
-            this.rdTenSach.Text = "Tên sách";
-            this.rdTenSach.UseVisualStyleBackColor = true;
-            // 
-            // btnTimKiemSach
-            // 
-            this.btnTimKiemSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiemSach.Location = new System.Drawing.Point(325, 78);
-            this.btnTimKiemSach.Name = "btnTimKiemSach";
-            this.btnTimKiemSach.Size = new System.Drawing.Size(103, 27);
-            this.btnTimKiemSach.TabIndex = 5;
-            this.btnTimKiemSach.Text = "Tìm kiếm";
-            this.btnTimKiemSach.UseVisualStyleBackColor = true;
-            this.btnTimKiemSach.Click += new System.EventHandler(this.btnTimKiemSach_Click);
-            // 
-            // rdMaSach
-            // 
-            this.rdMaSach.AutoSize = true;
-            this.rdMaSach.Location = new System.Drawing.Point(6, 38);
-            this.rdMaSach.Name = "rdMaSach";
-            this.rdMaSach.Size = new System.Drawing.Size(79, 20);
-            this.rdMaSach.TabIndex = 3;
-            this.rdMaSach.TabStop = true;
-            this.rdMaSach.Text = "Mã sách";
-            this.rdMaSach.UseVisualStyleBackColor = true;
-            // 
-            // txtTimKiemSach
-            // 
-            this.txtTimKiemSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiemSach.Location = new System.Drawing.Point(6, 78);
-            this.txtTimKiemSach.Name = "txtTimKiemSach";
-            this.txtTimKiemSach.Size = new System.Drawing.Size(301, 27);
-            this.txtTimKiemSach.TabIndex = 2;
-            // 
-            // dgSach
-            // 
-            this.dgSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgSach.Location = new System.Drawing.Point(6, 111);
-            this.dgSach.Name = "dgSach";
-            this.dgSach.RowHeadersWidth = 51;
-            this.dgSach.RowTemplate.Height = 24;
-            this.dgSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgSach.Size = new System.Drawing.Size(649, 294);
-            this.dgSach.TabIndex = 1;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btnTimKiemDG);
-            this.groupBox2.Controls.Add(this.rdMaDocGia);
-            this.groupBox2.Controls.Add(this.rdTenDocGia);
-            this.groupBox2.Controls.Add(this.txtTimKiemDG);
-            this.groupBox2.Controls.Add(this.dgDocGia);
-            this.groupBox2.Location = new System.Drawing.Point(663, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(683, 311);
-            this.groupBox2.TabIndex = 3;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Danh sách độc giả:";
-            // 
-            // btnTimKiemDG
-            // 
-            this.btnTimKiemDG.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimKiemDG.Location = new System.Drawing.Point(327, 74);
-            this.btnTimKiemDG.Name = "btnTimKiemDG";
-            this.btnTimKiemDG.Size = new System.Drawing.Size(103, 27);
-            this.btnTimKiemDG.TabIndex = 4;
-            this.btnTimKiemDG.Text = "Tìm kiếm";
-            this.btnTimKiemDG.UseVisualStyleBackColor = true;
-            this.btnTimKiemDG.Click += new System.EventHandler(this.btnTimKiemDG_Click);
-            // 
-            // rdMaDocGia
-            // 
-            this.rdMaDocGia.AutoSize = true;
-            this.rdMaDocGia.Location = new System.Drawing.Point(134, 35);
-            this.rdMaDocGia.Name = "rdMaDocGia";
-            this.rdMaDocGia.Size = new System.Drawing.Size(95, 20);
-            this.rdMaDocGia.TabIndex = 3;
-            this.rdMaDocGia.TabStop = true;
-            this.rdMaDocGia.Text = "Mã độc giả";
-            this.rdMaDocGia.UseVisualStyleBackColor = true;
-            // 
-            // rdTenDocGia
-            // 
-            this.rdTenDocGia.AutoSize = true;
-            this.rdTenDocGia.Location = new System.Drawing.Point(7, 35);
-            this.rdTenDocGia.Name = "rdTenDocGia";
-            this.rdTenDocGia.Size = new System.Drawing.Size(100, 20);
-            this.rdTenDocGia.TabIndex = 2;
-            this.rdTenDocGia.TabStop = true;
-            this.rdTenDocGia.Text = "Tên độc giả";
-            this.rdTenDocGia.UseVisualStyleBackColor = true;
-            // 
-            // txtTimKiemDG
-            // 
-            this.txtTimKiemDG.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiemDG.Location = new System.Drawing.Point(6, 74);
-            this.txtTimKiemDG.Name = "txtTimKiemDG";
-            this.txtTimKiemDG.Size = new System.Drawing.Size(301, 27);
-            this.txtTimKiemDG.TabIndex = 1;
-            // 
-            // dgDocGia
-            // 
-            this.dgDocGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgDocGia.Location = new System.Drawing.Point(6, 107);
-            this.dgDocGia.Name = "dgDocGia";
-            this.dgDocGia.RowHeadersWidth = 51;
-            this.dgDocGia.RowTemplate.Height = 24;
-            this.dgDocGia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgDocGia.Size = new System.Drawing.Size(671, 198);
-            this.dgDocGia.TabIndex = 0;
-            this.dgDocGia.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgDocGia_CellMouseClick);
-            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.btnHuy);
@@ -287,7 +158,7 @@
             this.groupBox4.Controls.Add(this.label1);
             this.groupBox4.Location = new System.Drawing.Point(12, 26);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(629, 297);
+            this.groupBox4.Size = new System.Drawing.Size(997, 305);
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Thông tin độc giả:";
@@ -298,6 +169,7 @@
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(75, 31);
             this.btnHuy.TabIndex = 9;
+            this.btnHuy.TabStop = false;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
             // 
@@ -389,7 +261,8 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(246, 740);
+            this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnXoa.Location = new System.Drawing.Point(434, 873);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(84, 32);
             this.btnXoa.TabIndex = 5;
@@ -399,7 +272,8 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(957, 740);
+            this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnThem.Location = new System.Drawing.Point(1481, 873);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(84, 32);
             this.btnThem.TabIndex = 6;
@@ -407,30 +281,168 @@
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.rdTenSach);
+            this.groupBox3.Controls.Add(this.btnTimKiemSach);
+            this.groupBox3.Controls.Add(this.rdMaSach);
+            this.groupBox3.Controls.Add(this.txtTimKiemSach);
+            this.groupBox3.Controls.Add(this.dgSach);
+            this.groupBox3.Location = new System.Drawing.Point(1068, 350);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(844, 517);
+            this.groupBox3.TabIndex = 7;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Sách trong kho:";
+            // 
+            // rdTenSach
+            // 
+            this.rdTenSach.AutoSize = true;
+            this.rdTenSach.Location = new System.Drawing.Point(138, 38);
+            this.rdTenSach.Name = "rdTenSach";
+            this.rdTenSach.Size = new System.Drawing.Size(84, 20);
+            this.rdTenSach.TabIndex = 6;
+            this.rdTenSach.TabStop = true;
+            this.rdTenSach.Text = "Tên sách";
+            this.rdTenSach.UseVisualStyleBackColor = true;
+            // 
+            // btnTimKiemSach
+            // 
+            this.btnTimKiemSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiemSach.Location = new System.Drawing.Point(325, 78);
+            this.btnTimKiemSach.Name = "btnTimKiemSach";
+            this.btnTimKiemSach.Size = new System.Drawing.Size(103, 27);
+            this.btnTimKiemSach.TabIndex = 5;
+            this.btnTimKiemSach.Text = "Tìm kiếm";
+            this.btnTimKiemSach.UseVisualStyleBackColor = true;
+            // 
+            // rdMaSach
+            // 
+            this.rdMaSach.AutoSize = true;
+            this.rdMaSach.Location = new System.Drawing.Point(6, 38);
+            this.rdMaSach.Name = "rdMaSach";
+            this.rdMaSach.Size = new System.Drawing.Size(79, 20);
+            this.rdMaSach.TabIndex = 3;
+            this.rdMaSach.TabStop = true;
+            this.rdMaSach.Text = "Mã sách";
+            this.rdMaSach.UseVisualStyleBackColor = true;
+            // 
+            // txtTimKiemSach
+            // 
+            this.txtTimKiemSach.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiemSach.Location = new System.Drawing.Point(6, 78);
+            this.txtTimKiemSach.Name = "txtTimKiemSach";
+            this.txtTimKiemSach.Size = new System.Drawing.Size(301, 27);
+            this.txtTimKiemSach.TabIndex = 2;
+            // 
+            // dgSach
+            // 
+            this.dgSach.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dgSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgSach.Location = new System.Drawing.Point(6, 111);
+            this.dgSach.Name = "dgSach";
+            this.dgSach.RowHeadersWidth = 51;
+            this.dgSach.RowTemplate.Height = 24;
+            this.dgSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgSach.Size = new System.Drawing.Size(832, 400);
+            this.dgSach.TabIndex = 1;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.btnTimKiemDG);
+            this.groupBox2.Controls.Add(this.rdMaDocGia);
+            this.groupBox2.Controls.Add(this.rdTenDocGia);
+            this.groupBox2.Controls.Add(this.txtTimKiemDG);
+            this.groupBox2.Controls.Add(this.dgDocGia);
+            this.groupBox2.Location = new System.Drawing.Point(1068, 20);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(844, 311);
+            this.groupBox2.TabIndex = 8;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Danh sách độc giả:";
+            // 
+            // btnTimKiemDG
+            // 
+            this.btnTimKiemDG.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiemDG.Location = new System.Drawing.Point(327, 74);
+            this.btnTimKiemDG.Name = "btnTimKiemDG";
+            this.btnTimKiemDG.Size = new System.Drawing.Size(103, 27);
+            this.btnTimKiemDG.TabIndex = 4;
+            this.btnTimKiemDG.Text = "Tìm kiếm";
+            this.btnTimKiemDG.UseVisualStyleBackColor = true;
+            // 
+            // rdMaDocGia
+            // 
+            this.rdMaDocGia.AutoSize = true;
+            this.rdMaDocGia.Location = new System.Drawing.Point(134, 35);
+            this.rdMaDocGia.Name = "rdMaDocGia";
+            this.rdMaDocGia.Size = new System.Drawing.Size(95, 20);
+            this.rdMaDocGia.TabIndex = 3;
+            this.rdMaDocGia.TabStop = true;
+            this.rdMaDocGia.Text = "Mã độc giả";
+            this.rdMaDocGia.UseVisualStyleBackColor = true;
+            // 
+            // rdTenDocGia
+            // 
+            this.rdTenDocGia.AutoSize = true;
+            this.rdTenDocGia.Location = new System.Drawing.Point(7, 35);
+            this.rdTenDocGia.Name = "rdTenDocGia";
+            this.rdTenDocGia.Size = new System.Drawing.Size(100, 20);
+            this.rdTenDocGia.TabIndex = 2;
+            this.rdTenDocGia.TabStop = true;
+            this.rdTenDocGia.Text = "Tên độc giả";
+            this.rdTenDocGia.UseVisualStyleBackColor = true;
+            // 
+            // txtTimKiemDG
+            // 
+            this.txtTimKiemDG.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiemDG.Location = new System.Drawing.Point(6, 74);
+            this.txtTimKiemDG.Name = "txtTimKiemDG";
+            this.txtTimKiemDG.Size = new System.Drawing.Size(301, 27);
+            this.txtTimKiemDG.TabIndex = 1;
+            // 
+            // dgDocGia
+            // 
+            this.dgDocGia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgDocGia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgDocGia.Location = new System.Drawing.Point(6, 107);
+            this.dgDocGia.Name = "dgDocGia";
+            this.dgDocGia.RowHeadersWidth = 51;
+            this.dgDocGia.RowTemplate.Height = 24;
+            this.dgDocGia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgDocGia.Size = new System.Drawing.Size(832, 198);
+            this.dgDocGia.TabIndex = 0;
+            // 
             // MuonSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1358, 796);
+            this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnThem);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Name = "MuonSach";
             this.Text = "MuonSach";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MuonSach_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgSachMuon)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgSach)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgDocGia)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -438,22 +450,10 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dgDocGia;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.Button btnTimKiemDG;
-        private System.Windows.Forms.RadioButton rdMaDocGia;
-        private System.Windows.Forms.RadioButton rdTenDocGia;
-        private System.Windows.Forms.TextBox txtTimKiemDG;
         private System.Windows.Forms.DataGridView dgSachMuon;
-        private System.Windows.Forms.RadioButton rdTenSach;
-        private System.Windows.Forms.Button btnTimKiemSach;
-        private System.Windows.Forms.RadioButton rdMaSach;
-        private System.Windows.Forms.TextBox txtTimKiemSach;
-        private System.Windows.Forms.DataGridView dgSach;
         private System.Windows.Forms.Label lblNgaySinh;
         private System.Windows.Forms.Label lblSoDT;
         private System.Windows.Forms.Label lblTenDocGia;
@@ -470,5 +470,19 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn GiaNhap;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenTacGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
+        private System.Windows.Forms.Button btnHuy;
+        private System.Windows.Forms.Button btnLapPhieu;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.RadioButton rdTenSach;
+        private System.Windows.Forms.Button btnTimKiemSach;
+        private System.Windows.Forms.RadioButton rdMaSach;
+        private System.Windows.Forms.TextBox txtTimKiemSach;
+        private System.Windows.Forms.DataGridView dgSach;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnTimKiemDG;
+        private System.Windows.Forms.RadioButton rdMaDocGia;
+        private System.Windows.Forms.RadioButton rdTenDocGia;
+        private System.Windows.Forms.TextBox txtTimKiemDG;
+        private System.Windows.Forms.DataGridView dgDocGia;
     }
 }

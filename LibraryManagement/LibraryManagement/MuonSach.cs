@@ -15,6 +15,7 @@ namespace LibraryManagement
     public partial class MuonSach : Form
     {
         private PhieuMuonBUS phieumuonbus = new PhieuMuonBUS();
+        Utils u = new Utils();
         public MuonSach()
         {
             InitializeComponent();
@@ -26,6 +27,9 @@ namespace LibraryManagement
             dgDocGia.DataSource = new DocGiaBUS().DocGiaList();
             rdMaDocGia.Checked = true;
             rdTenSach.Checked = true;
+            u.SetPropertiesDataGridView(dgSach);
+            u.SetPropertiesDataGridView(dgSachMuon);
+            u.SetPropertiesDataGridView(dgDocGia);
         }
 
         private void btnTimKiemDG_Click(object sender, EventArgs e)

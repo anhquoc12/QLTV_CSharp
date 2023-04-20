@@ -34,21 +34,3 @@ D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\QLTV.DAO.dll.config
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\QLTV.DTO.pdb
 D:\IT03\Lap Trinh Co So Du Lieu\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\QLTV.DTO.dll.config
-C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\QLTV.BUS.dll.config
-C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\QLTV.BUS.dll
-C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\QLTV.BUS.pdb
-C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\EntityFramework.dll
-C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\QLTV.DAO.dll
-C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\QLTV.DTO.dll
-C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\QLTV.DAO.pdb
-C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\QLTV.DAO.dll.config
-C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\QLTV.DTO.pdb
-C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\QLTV.DTO.dll.config
-C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\EntityFramework.xml
-C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\QLTV.BUS\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\QLTV.BUS\obj\Debug\QLTV.BUS.csproj.AssemblyReference.cache
-C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\QLTV.BUS\obj\Debug\QLTV.BUS.csproj.CoreCompileInputs.cache
-C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\QLTV.BUS\obj\Debug\QLTV.BUS.csproj.CopyComplete
-C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\QLTV.BUS\obj\Debug\QLTV.BUS.dll
-C:\Users\Admin\OneDrive\Documents\QLTV_CSharp\LibraryManagement\QLTV.BUS\obj\Debug\QLTV.BUS.pdb
